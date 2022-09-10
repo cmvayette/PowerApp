@@ -14,11 +14,9 @@ scrRequests As screen:
                 {Title: "Request Features"},
                 {Title: "Request Application"}
             )
-        IssuesCats: =Component1_2.IssueFilters
 
     PowerPlatformMenu_13 As PowerPlatformMenu:
         Height: =565.44
-        Lists: =PowerPlatformMenu_13.MenuList
         MenuList: |-
             =Table(
                 {
@@ -59,7 +57,6 @@ scrRequests As screen:
 
         PowerPlatformMenu_14 As PowerPlatformMenu:
             Height: =96
-            Lists: =PowerPlatformMenu_14.MenuList
             MenuList: |-
                 =Table(
                     {

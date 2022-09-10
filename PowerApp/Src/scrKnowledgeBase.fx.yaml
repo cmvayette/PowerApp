@@ -57,7 +57,6 @@ scrKnowledgeBase As screen:
 
     PowerPlatformMenu_9 As PowerPlatformMenu:
         Height: =565.44
-        Lists: =PowerPlatformMenu_9.MenuList
         MenuList: |-
             =Table(
                 {
@@ -159,7 +158,6 @@ scrKnowledgeBase As screen:
 
         PowerPlatformMenu_10 As PowerPlatformMenu:
             Height: =96
-            Lists: =PowerPlatformMenu_10.MenuList
             MenuList: |-
                 =Table(
                     {

@@ -5,11 +5,9 @@ scrIssueLog As screen:
     OnVisible: =Set(varIssueFilter, Gallery3.Selected.Title); Set(varModalIssue, false); Set(varSpecVis, "Nope"); Set(varModalIssueEdit, false)
 
     Component1_1 As Component1:
-        IssuesCats: =Component1_1.IssueFilters
 
     PowerPlatformMenu_5 As PowerPlatformMenu:
         Height: =565.44
-        Lists: =PowerPlatformMenu_5.MenuList
         MenuList: |-
             =Table(
                 {
@@ -50,7 +48,6 @@ scrIssueLog As screen:
 
         PowerPlatformMenu_6 As PowerPlatformMenu:
             Height: =96
-            Lists: =PowerPlatformMenu_6.MenuList
             MenuList: |-
                 =Table(
                     {

@@ -21,12 +21,12 @@
       },
       "IssuesCats"
     ],
-    "LastModifiedTimestamp": "637984332551392594",
+    "LastModifiedTimestamp": "637984374656260758",
     "Name": "Component1",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "Table(\n    \n    {Title: \"Power Apps\"},\n    {Title: \"Power Automate\"},\n    {Title: \"Power BI\"},\n    {Title: \"Power Virtual Agents\"},\n    {Title: \"DataVerse\"}\n)",
+        "InvariantScript": "Table(\r\n    \r\n    {Title: \"Power Apps\"},\r\n    {Title: \"Power Automate\"},\r\n    {Title: \"Power BI\"},\r\n    {Title: \"Power Virtual Agents\"},\r\n    {Title: \"DataVerse\"}\r\n)",
         "Property": "IssueFilters",
         "RuleProviderType": "System"
       },
@@ -111,7 +111,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984332551392594",
+  "LastModifiedTimestamp": "637984374656260758",
   "Name": "bc4a1ab30d2d41feab4fd706a8f642e1",
   "OverridableProperties": {},
   "Version": "637812482778534996"
