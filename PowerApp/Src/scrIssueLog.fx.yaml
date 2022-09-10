@@ -211,8 +211,8 @@ scrIssueLog As screen:
                     contCard4TitleLabel As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(70,71,117,1)
                         Height: =40
-                        Width: =Parent.Width-15
-                        X: =5
+                        Width: =Parent.Width*.975
+                        X: =2
                         Y: =0+0
                         ZIndex: =1
 
@@ -319,8 +319,10 @@ scrIssueLog As screen:
                                 RGBA(224,224,237,1),
                                 Transparent
                             )
+                        TemplatePadding: =2
                         TemplateSize: =Parent.Height/11
-                        Width: =Parent.Width+0
+                        Width: =Parent.Width*.975
+                        X: =2
                         Y: =contCard4TitleLabel.Height
                         ZIndex: =2
 
