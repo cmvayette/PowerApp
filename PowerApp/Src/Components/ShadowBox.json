@@ -73,7 +73,7 @@
         "Name": "HtmlText1",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 257,
+        "PublishOrderIndex": 249,
         "Rules": [
           {
             "Category": "Data",
@@ -263,7 +263,7 @@
         "Name": "imgJohnny5",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 258,
+        "PublishOrderIndex": 250,
         "Rules": [
           {
             "Category": "Data",
@@ -531,7 +531,7 @@
         "Name": "imgDisassembled",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 259,
+        "PublishOrderIndex": 251,
         "Rules": [
           {
             "Category": "Data",
@@ -799,7 +799,7 @@
         "Name": "Imgplatform",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 260,
+        "PublishOrderIndex": 252,
         "Rules": [
           {
             "Category": "Data",

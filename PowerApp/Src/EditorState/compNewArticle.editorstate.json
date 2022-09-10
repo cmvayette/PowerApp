@@ -74,12 +74,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
+          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
+          "PropertyName": "X",
           "RuleProviderType": "Unknown"
         },
         {
@@ -245,7 +245,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Component2": {
+    "compNewArticle": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -263,28 +263,13 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Component2",
+      "Name": "compNewArticle",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
+          "PropertyName": "ZIndex",
           "RuleProviderType": "System"
         },
         {
@@ -294,7 +279,22 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "ZIndex",
+          "PropertyName": "X",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
           "RuleProviderType": "System"
         }
       ],
@@ -1460,5 +1460,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Component2"
+  "TopParentName": "compNewArticle"
 }

@@ -90,6 +90,7 @@
     "FileID": "35f10094-e232-465c-9a8e-b3a4871a55bf",
     "Id": "d3168067-21d1-4bf6-be4a-f70ef4f780a2",
     "InstrumentationKey": "",
+    "LocalDatabaseReferences": "{}",
     "Name": "Hub",
     "OriginatingVersion": "1.321"
   },

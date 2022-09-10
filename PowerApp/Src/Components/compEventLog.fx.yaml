@@ -1,0 +1,167 @@
+compEventLog As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =344
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery5_1 As gallery.galleryVertical:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        FocusedBorderThickness: =2
+        Height: =Parent.Height-Rectangle3_1.Y
+        Items: |-
+            =With(
+                {
+                    records: colArticles },
+                ForAll(
+                    Sequence(CountRows(colArticles)),
+                    Patch(
+                        Last(
+                            FirstN(records,Value)),
+                            {rowNumber: Value}
+                        )
+            ))
+        Layout: =Layout.Vertical
+        OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+        ShowScrollbar: =false
+        TemplateFill: |-
+            =If(
+                Mod(ThisItem.rowNumber,2) = 0,
+                RGBA(224,224,237,1),
+                Transparent
+            )
+        TemplateSize: =Parent.Height/6
+        Width: =Parent.Width-Self.X
+        X: =Rectangle3_1.X
+        Y: =Rectangle3_1.Y+Rectangle3_1.Height
+        ZIndex: =1
+
+        lblTitle_1 As Label:
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =12
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.Name
+            Width: =Parent.Width*.2
+            X: =16
+            Y: =lblPersText_1.Y
+            ZIndex: =1
+
+        lblFirstLine_1 As Label:
+            AutoHeight: =false
+            DisplayMode: =DisplayMode.View
+            FontSize: =10
+            Height: =25
+            OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.FirstParagraph
+            VerticalAlignment: =VerticalAlign.Bottom
+            Width: =Parent.Width*.5
+            X: =lblTitle_1.X+lblTitle_1.Width*1.1
+            Y: =lblPersText_1.Y
+            ZIndex: =2
+
+        rectPersBox_1 As rectangle:
+            BorderColor: =RGBA(161, 162, 202, 1)
+            DisabledFill: =RGBA(200, 198, 196, 1)
+            Fill: =RGBA(109, 49, 162, 1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =30
+            HoverFill: =RGBA(98, 100, 167, 1)
+            OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+            PressedFill: =RGBA(98, 100, 167, 1)
+            Width: =Parent.Width*.15
+            X: =Parent.Width*.75
+            Y: =Parent.TemplateHeight*.5-rectPersBox_1.Height*.5
+            ZIndex: =3
+
+        lblPersText_1 As Label:
+            Alignment: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Edit
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+            Overflow: ='''Microsoft.CoreControls.Label.Overflow'''.Hidden
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.AuthorName
+            Width: =rectPersBox_1.Width
+            X: =rectPersBox_1.X
+            Y: =rectPersBox_1.Y+rectPersBox_1.Height*.5-lblPersText_1.Height*.5
+            ZIndex: =4
+
+        lblReportDate_1 As Label:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: =Set(varRumblingRecord, ThisItem); Set(varReportView, true)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.DateSubmitted
+            Width: =Parent.TemplateWidth-lblReportDate_1.X
+            X: =rectPersBox_1.X+rectPersBox_1.Width*1.1
+            Y: =lblPersText_1.Y
+            ZIndex: =5
+
+    Icon1_1 As icon.Add:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(70, 71, 117, 1)
+        DisabledBorderColor: =RGBA(243, 242, 241, 1)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =32
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Add
+        OnSelect: =Set(varModalMenuReport, true)
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(User().FullName = "Corey Vayette", true, false)
+        Width: =32
+        X: =Parent.Width-Self.Width*2
+        Y: =16
+        ZIndex: =2
+
+    Container1_1 As groupContainer.manualLayoutContainer:
+        Height: =60
+        Width: =Parent.Width+0
+        X: =
+        Y: =
+        ZIndex: =3
+
+        Rectangle3_1 As rectangle:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(200, 198, 196, 1)
+            Fill: =RGBA(70,71,117,1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =3
+            HoverFill: =RGBA(98, 100, 167, 1)
+            PressedFill: =RGBA(98, 100, 167, 1)
+            Width: =Parent.Width*.9
+            X: =Parent.Width*.025
+            Y: =Parent.Height-Rectangle3_1.Height
+            ZIndex: =1
+
+        lblRumblingTitle_1 As Label:
+            Alignment: =Align.Left
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =16
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Rumblings Across the Force"
+            Width: =Parent.Width*.75
+            X: =Parent.Width*.05
+            Y: =
+            ZIndex: =2
+

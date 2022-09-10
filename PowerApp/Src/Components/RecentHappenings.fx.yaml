@@ -12,9 +12,9 @@ RecentHappenings As CanvasComponent:
     ItemsDate: =Now()
     ItemsEmail: ="Text"
     ItemsTitle: ="Text"
-    varHeight: =100
+    varHeight: =766
     varItems: =
-    varWidth: =100
+    varWidth: =1366
     Width: =RecentHappenings.varWidth
     X: =0
     Y: =0

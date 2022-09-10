@@ -79,7 +79,7 @@
         "Name": "rectBackground",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 311,
+        "PublishOrderIndex": 303,
         "Rules": [
           {
             "Category": "Design",
@@ -271,7 +271,7 @@
         "Name": "rectMenu",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 312,
+        "PublishOrderIndex": 304,
         "Rules": [
           {
             "Category": "Design",
@@ -455,7 +455,7 @@
         "Name": "HtmlText2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 313,
+        "PublishOrderIndex": 305,
         "Rules": [
           {
             "Category": "Data",
@@ -645,7 +645,7 @@
         "Name": "Icon5_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 314,
+        "PublishOrderIndex": 306,
         "Rules": [
           {
             "Category": "Design",
@@ -924,7 +924,7 @@
         "Name": "lblMenuTitle",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 315,
+        "PublishOrderIndex": 307,
         "Rules": [
           {
             "Category": "Data",
@@ -1085,7 +1085,7 @@
         "Name": "rectBreakBreak",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 316,
+        "PublishOrderIndex": 308,
         "Rules": [
           {
             "Category": "Design",
@@ -1249,7 +1249,7 @@
         "Name": "lblIssueCat_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 317,
+        "PublishOrderIndex": 309,
         "Rules": [
           {
             "Category": "Data",
@@ -1355,7 +1355,7 @@
             "Name": "Value1_2",
             "Parent": "cmbIssueCat_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 319,
+            "PublishOrderIndex": 311,
             "Rules": [
               {
                 "Category": "Data",
@@ -1487,7 +1487,7 @@
         "Name": "cmbIssueCat_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 318,
+        "PublishOrderIndex": 310,
         "Rules": [
           {
             "Category": "Data",
@@ -1617,7 +1617,7 @@
         "Name": "lblIssueTitle_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 320,
+        "PublishOrderIndex": 312,
         "Rules": [
           {
             "Category": "Data",
@@ -1755,7 +1755,7 @@
         "Name": "txtIssueTitle_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 321,
+        "PublishOrderIndex": 313,
         "Rules": [
           {
             "Category": "Data",
@@ -1891,7 +1891,7 @@
         "Name": "lblIssueDesc_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 322,
+        "PublishOrderIndex": 314,
         "Rules": [
           {
             "Category": "Data",
@@ -2044,7 +2044,7 @@
         "Name": "txtIssueDesc_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 323,
+        "PublishOrderIndex": 315,
         "Rules": [
           {
             "Category": "Data",
@@ -2186,7 +2186,7 @@
         "Name": "UploadedImage1_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 324,
+        "PublishOrderIndex": 316,
         "Rules": [
           {
             "Category": "Data",
@@ -2470,7 +2470,7 @@
         "Name": "AddMediaButton1_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 325,
+        "PublishOrderIndex": 317,
         "Rules": [
           {
             "Category": "Data",
@@ -2745,7 +2745,7 @@
         "Name": "Button5_2",
         "Parent": "ModalMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 326,
+        "PublishOrderIndex": 318,
         "Rules": [
           {
             "Category": "Data",
