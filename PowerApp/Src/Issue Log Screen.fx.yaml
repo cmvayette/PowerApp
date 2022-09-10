@@ -1,23 +1,13 @@
-scrRequests As screen:
+"'Issue Log Screen' As screen":
     Fill: |
         =ColorValue("#F3F2F1") 
     LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
-    OnVisible: =Set(varIssueFilter, Gallery3_1.Selected.Title); Set(varModalFeature, false); Set(varDetVis, "Nope"); Set(varModalIssueEdit, false); 
+    OnVisible: =Set(varIssueFilter, Gallery3.Selected.Title); Set(varModalIssue, false); Set(varSpecVis, "Nope"); Set(varModalIssueEdit, false)
 
-    Component1_2 As Component1:
-        IssueFilters: |-
-            =Table(
-                
-                {Title: "Pending Connectors"},
-                {Title: "Pending Features"},
-                {Title: "Request Connectors"},
-                {Title: "Request Features"},
-                {Title: "Request Application"}
-            )
+    Component1_1 As Component1:
 
-    PowerPlatformMenu_13 As PowerPlatformMenu:
+    PowerPlatformMenu_5 As PowerPlatformMenu:
         Height: =565.44
-        Lists: =PowerPlatformMenu_13.MenuList
         MenuList: |-
             =Table(
                 {
@@ -28,37 +18,36 @@ scrRequests As screen:
                 {
                     Title: "Issue Log",
                     Icon: Bug,
-                    Screen: scrRequests
+                    Screen: 'Issue Log Screen'
                 },
                 {
                     Title: "Roadmap",
                     Icon: LevelsLayersItems,
-                    Screen: scrRoadmap
+                    Screen: 'Roadmap Screen'
                 },
                 {
                     Title: "Knowledge Base",
                     Icon: Notebook,
-                    Screen: scrKnowledgeBase
+                    Screen: 'Knowedge Base Screen'
                 },
                 {
                     Title: "Requests",
                     Icon: Items,
-                    Screen: scrRequests
+                    Screen: 'Requests Screen'
                 }
             )
         Width: =227.66666666666663
         ZIndex: =2
 
-    contHeader_6 As groupContainer.manualLayoutContainer:
+    contHeader_2 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height/8
         Width: =Parent.Width
         X: =0+0
         Y: =0+0
         ZIndex: =4
 
-        PowerPlatformMenu_14 As PowerPlatformMenu:
+        PowerPlatformMenu_6 As PowerPlatformMenu:
             Height: =96
-            Lists: =PowerPlatformMenu_14.MenuList
             MenuList: |-
                 =Table(
                     {
@@ -69,38 +58,38 @@ scrRequests As screen:
                     {
                         Title: "Issue Log",
                         Icon: Bug,
-                        Screen: scrRequests
+                        Screen: 'Issue Log Screen'
                     },
                     {
                         Title: "Roadmap",
                         Icon: LevelsLayersItems,
-                        Screen: scrRoadmap
+                        Screen: 'Roadmap Screen'
                     },
                     {
                         Title: "Knowledge Base",
                         Icon: Notebook,
-                        Screen: scrKnowledgeBase
+                        Screen: 'Knowedge Base Screen'
                     },
                     {
                         Title: "Features",
                         Icon: Items,
-                        Screen: scrRequests
+                        Screen: 'Requests Screen'
                     }
                 )
             Width: =227.66666666666663
 
-        ShadowBox_7 As ShadowBox:
+        ShadowBox_3 As ShadowBox:
             Height: =96
             ShadowBoxWidth: =Parent.Width
             Width: =Parent.Width
             ZIndex: =2
 
-        Gallery4_5 As gallery.BrowseLayout_Horizontal_TwoTextOneImageVariant_pcfCore:
+        Gallery4_1 As gallery.BrowseLayout_Horizontal_TwoTextOneImageVariant_pcfCore:
             BorderColor: =RGBA(243, 242, 241, 1)
             FocusedBorderColor: =RGBA(98, 100, 167, 1)
             FocusedBorderThickness: =2
             Height: =Parent.Height-16
-            Items: =PowerPlatformMenu_14.Lists
+            Items: =PowerPlatformMenu_6.Lists
             OnSelect: =Set(varCurrentScreen, ThisItem.Title);Navigate(ThisItem.Screen)
             ShowScrollbar: =false
             TemplatePadding: =0
@@ -110,7 +99,7 @@ scrRequests As screen:
             Y: =5+0
             ZIndex: =4
 
-            Label7_5 As Label:
+            Label7_1 As Label:
                 Alignment: =Align.Center
                 Color: =If(varCurrentScreen = ThisItem.Title, RGBA(255, 255, 255, 1), RGBA(161, 162, 202, 1))
                 DisplayMode: =DisplayMode.Edit
@@ -119,11 +108,11 @@ scrRequests As screen:
                 PCFTeamsTheme: =TeamsTheme.Default
                 Text: =ThisItem.Title
                 Width: =110
-                X: =3.8333333333333286
+                X: =varLabelX
                 Y: =40
                 ZIndex: =1
 
-            Icon2_5 As icon.Add:
+            Icon2_1 As icon.Add:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 Color: =If(varCurrentScreen = ThisItem.Title, RGBA(255, 255, 255, 1), RGBA(161, 162, 202, 1))
                 DisabledBorderColor: =RGBA(243, 242, 241, 1)
@@ -147,20 +136,20 @@ scrRequests As screen:
                 Y: =8
                 ZIndex: =2
 
-    contCat_6 As groupContainer.manualLayoutContainer:
+    contCat_2 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height/15
         Width: =Parent.Width
         X: =0+0
-        Y: =contHeader_6.Height*.95+contHeader_6.Y
+        Y: =contHeader_2.Height*.95+contHeader_2.Y
         ZIndex: =7
 
-        Gallery3_1 As gallery.galleryHorizontal:
+        Gallery3 As gallery.galleryHorizontal:
             BorderColor: =RGBA(243, 242, 241, 1)
-            Default: =First(Gallery3_1.AllItems.Title)
+            Default: =First(Gallery3.AllItems.Title)
             FocusedBorderColor: =RGBA(98, 100, 167, 1)
             FocusedBorderThickness: =2
             Height: =51.2
-            Items: =Component1_2.IssuesCats
+            Items: =Component1_1.IssuesCats
             OnSelect: =Set(varIssueFilter, ThisItem.Title)
             ShowScrollbar: =false
             TemplateSize: =Parent.Width/7
@@ -168,7 +157,7 @@ scrRequests As screen:
             X: =Parent.Width*.1
             ZIndex: =1
 
-            Label10_1 As Label:
+            Label10 As Label:
                 Alignment: =Align.Center
                 Color: =If(ThisItem.IsSelected, RGBA(70,71,117,1),RGBA(0,0,0,1))
                 DisplayMode: =DisplayMode.Edit
@@ -182,56 +171,62 @@ scrRequests As screen:
                 Y: =
                 ZIndex: =1
 
-    ModalMenuFeature_1 As ModalMenuFeature:
-        Height: =ModalMenuFeature_1.varHeight
-        Visible: =MenuVis
-        Width: =ModalMenuFeature_1.varWidth
-        ZIndex: =9
-
-    grpBody_1 As group:
+    grpBody As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =9
 
-        contBody_7 As groupContainer.manualLayoutContainer:
-            Height: =Parent.Height-contBody_7.Y
+        contBody_2 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-contBody_2.Y
             Width: =Parent.Width*.33
             X: =Parent.Width*.025
-            Y: =contHeader_6.Y+contHeader_6.Height*1.33
+            Y: =contHeader_2.Y+contHeader_2.Height*1.33
             ZIndex: =3
 
-            contContent_7 As groupContainer.manualLayoutContainer:
+            contContent_2 As groupContainer.manualLayoutContainer:
                 Height: =Parent.Height
                 Width: =Parent.Width
                 Y: =
                 ZIndex: =2
 
-                ShadowBoxCard_12 As ShadowBoxCard:
+                ShadowBoxCard_11 As ShadowBoxCard:
                     Height: =Parent.Height
-                    ShadowBoxHeight: =ShadowBoxCard_12.Height
+                    ShadowBoxHeight: =ShadowBoxCard_11.Height
                     ShadowBoxWidth: =Parent.Width
                     Visible: =true
-                    Width: =Parent.Width*.965
-                    X: =4
+                    Width: =Parent.Width
+                    X: =12+0
 
-                contCard4_5 As groupContainer.manualLayoutContainer:
+                contCard4 As groupContainer.manualLayoutContainer:
                     Height: =Parent.Height*.9
-                    Width: =contContent_7.Width*.975
-                    X: =
-                    Y: =
+                    Width: =contContent_2.Width*.975
+                    X: =12+5
+                    Y: =contContent_2.Y+8
                     ZIndex: =5
 
-                    contCard4TitleLabel_2 As groupContainer.manualLayoutContainer:
+                    contCard4TitleLabel As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(70,71,117,1)
                         Height: =40
-                        Width: =Parent.Width-6
-                        X: =5
+                        Width: =Parent.Width*.975
+                        X: =2
                         Y: =0+0
                         ZIndex: =1
 
-                        Label4_3 As Label:
+                        "TextBox3 As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Placeholder: ="Search"
+                            Value: =""
+                            Visible: =varSearchView
+                            Width: =Parent.Width*.5
+                            X: =contCard4TitleLabel.Width-Self.Width-4
+                            Y: =Label4.Y
+                            ZIndex: =1
+
+                        Label4 As Label:
                             Alignment: =Align.Left
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
@@ -242,24 +237,12 @@ scrRequests As screen:
                             Text: ="Title"
                             Width: =Parent.Width*.25
                             X: =8
-                            Y: =Parent.Height*.5-Label4_3.Height*.5
-                            ZIndex: =1
+                            Y: =Parent.Height*.5-Label4.Height*.5
+                            ZIndex: =2
 
-                        "TextBox3_1 As 'Text box'":
-                            DisplayMode: =DisplayMode.Edit
-                            Height: =32
-                            PCFTeamsTheme: =TeamsTheme.Default
-                            Placeholder: ="Search"
-                            Value: =""
-                            Visible: =If(varSearchView, true, false)
-                            Width: =Parent.Width*.55
-                            X: =Parent.Width-Self.Width-4
-                            Y: =Label4_3.Y
-                            ZIndex: =5
-
-                        Icon8_2 As icon.Add:
+                        Icon8 As icon.Add:
                             BorderColor: =RGBA(0, 0, 0, 0)
-                            Color: =If(Icon8_3.Visible,RGBA(69,70,117,1),RGBA(255, 255, 255, 1))
+                            Color: =If(Icon8_1.Visible,RGBA(69,70,117,1),RGBA(255, 255, 255, 1))
                             DisabledBorderColor: =RGBA(243, 242, 241, 1)
                             DisabledColor: =RGBA(220, 220, 220, 1)
                             DisabledFill: =RGBA(0, 0, 0, 0)
@@ -268,7 +251,7 @@ scrRequests As screen:
                             HoverColor: =ColorFade(RGBA(255, 255, 255, 1), 30%)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Search
-                            OnSelect: =If(TextBox3_1.Visible, Set(varIssueFilter, TextBox3_1.Value), (Set(varSearchView, true)))
+                            OnSelect: =If(TextBox3.Visible, Set(varIssueFilter, TextBox3.Value), (Set(varSearchView, true)))
                             PaddingBottom: =5
                             PaddingLeft: =5
                             PaddingRight: =5
@@ -277,11 +260,11 @@ scrRequests As screen:
                             PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Width: =30
-                            X: =If(Icon8_3.Visible, TextBox3_1.X+TextBox3_1.Width-Icon8_2.Width-Icon8_3.Width*1.1, TextBox3_1.X+TextBox3_1.Width-Icon8_2.Width)
-                            Y: =TextBox3_1.Y
-                            ZIndex: =6
+                            X: =If(Icon8_1.Visible, TextBox3.X+TextBox3.Width-Icon8.Width-Icon8_1.Width*1.1, TextBox3.X+TextBox3.Width-Icon8.Width)
+                            Y: =TextBox3.Y
+                            ZIndex: =3
 
-                        Icon8_3 As icon.Add:
+                        Icon8_1 As icon.Add:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             Color: =RGBA(98, 100, 167, 1)
                             DisabledBorderColor: =RGBA(243, 242, 241, 1)
@@ -302,20 +285,21 @@ scrRequests As screen:
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Visible: =If(varSearchView, true, false)
                             Width: =30
-                            X: =TextBox3_1.X+TextBox3_1.Width-Icon8_3.Width
-                            Y: =TextBox3_1.Y
-                            ZIndex: =7
+                            X: =TextBox3.X+TextBox3.Width-Icon8_1.Width
+                            Y: =TextBox3.Y
+                            ZIndex: =4
 
-                    Gallery7_1 As gallery.galleryVertical:
+                    Gallery7 As gallery.galleryVertical:
                         BorderColor: =RGBA(243, 242, 241, 1)
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
-                        Height: =Parent.Height-contCard4TitleLabel_2.Height
+                        Height: =Parent.Height-contCard4TitleLabel.Height
                         Items: |-
                             =With(
                                 {
-                                    records: Filter(colPlatformFeatures, FeatureCategory=varIssueFilter)
-                                },
+                                    records: If(varIssueFilter= Gallery3.Selected.Title, Filter(colIssues, Category=varIssueFilter)
+                                , Search(colIssues, TextBox3.Value, "Title", "Category", "IssueNotes", "ReportedBy")
+                             ) },
                                 ForAll(
                                     Sequence(CountRows(records)),
                                     Patch(
@@ -325,7 +309,7 @@ scrRequests As screen:
                                         )
                             ))
                         Layout: =Layout.Vertical
-                        OnSelect: =Set(varRecord, ThisItem); Set(varDetVis, ThisItem.Name)
+                        OnSelect: =Set(varRecord, ThisItem); Set(varDetVis, ThisItem.Title)
                         ShowScrollbar: =false
                         TemplateFill: |-
                             =If(
@@ -333,45 +317,46 @@ scrRequests As screen:
                                 RGBA(224,224,237,1),
                                 Transparent
                             )
+                        TemplatePadding: =2
                         TemplateSize: =Parent.Height/11
-                        Width: =Parent.Width-4
-                        X: =4
-                        Y: =contCard4TitleLabel_2.Height
+                        Width: =Parent.Width*.975
+                        X: =2
+                        Y: =contCard4TitleLabel.Height
                         ZIndex: =2
 
-                        lblIssueSIngleTitle_2 As Label:
+                        lblIssueSIngleTitle As Label:
                             DisplayMode: =DisplayMode.Edit
                             FontWeight: =If(ThisItem.IsSelected, "semibold", "normal")
                             Height: =Parent.TemplateHeight*.8
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =ThisItem.Name
+                            Text: =ThisItem.Title
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth*.75
                             X: =
                             Y: =
                             ZIndex: =1
 
-                        lblIssueSIngleTitle_3 As Label:
+                        lblIssueSIngleTitle_1 As Label:
                             Alignment: =Align.Center
                             DisplayMode: =DisplayMode.Edit
-                            FontWeight: =FontWeight.Normal
+                            FontWeight: =If(ThisItem.IssueStatus="New", FontWeight.Semibold, FontWeight.Normal)
                             Height: =Parent.TemplateHeight*.8
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =ThisItem.DateofInformation
+                            Text: =ThisItem.IssueStatus
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth*.25
-                            X: =lblIssueSIngleTitle_2.Width
+                            X: =lblIssueSIngleTitle.Width
                             Y: =
                             ZIndex: =2
 
-                        Rectangle5_1 As rectangle:
+                        Rectangle5 As rectangle:
                             BorderColor: =RGBA(243, 242, 241, 1)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             DisabledFill: =RGBA(200, 198, 196, 1)
-                            Fill: =RGBA(98, 100, 167, 1)
+                            Fill: =If(varSpecVis=ThisItem.Title, RGBA(98, 100, 167, 1), RGBA(0,0,0,0))
                             FocusedBorderColor: =RGBA(98, 100, 167, 1)
                             Height: =4
                             HoverFill: =RGBA(98, 100, 167, 1)
@@ -379,36 +364,37 @@ scrRequests As screen:
                             PressedFill: =RGBA(98, 100, 167, 1)
                             Width: =Parent.TemplateWidth*.95
                             X: =Parent.TemplateWidth*.025
-                            Y: =Parent.TemplateHeight-Rectangle5_1.Height
+                            Y: =Parent.TemplateHeight-Rectangle5.Height
                             ZIndex: =3
 
-        contBody_8 As groupContainer.manualLayoutContainer:
-            Height: =Parent.Height-contBody_8.Y
+        contBody_6 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-contBody_6.Y
             Width: =Parent.Width*.6
-            X: =contBody_7.X+contBody_7.Width
-            Y: =contHeader_6.Y+contHeader_6.Height*1.33
+            X: =contBody_2.X+contBody_2.Width
+            Y: =contHeader_2.Y+contHeader_2.Height*1.33
             ZIndex: =8
 
-            contContent_8 As groupContainer.manualLayoutContainer:
+            contContent_6 As groupContainer.manualLayoutContainer:
                 Height: =Parent.Height
                 Width: =Parent.Width
                 Y: =
                 ZIndex: =2
 
-                ShadowBoxCard_16 As ShadowBoxCard:
+                ShadowBoxCard_15 As ShadowBoxCard:
                     Height: =Parent.Height
-                    ShadowBoxHeight: =ShadowBoxCard_16.Height
+                    ShadowBoxHeight: =ShadowBoxCard_15.Height
                     ShadowBoxWidth: =Parent.Width
                     Visible: =true
                     Width: =Parent.Width
 
-                contCard4_6 As groupContainer.manualLayoutContainer:
+                contCard4_4 As groupContainer.manualLayoutContainer:
                     Height: =Parent.Height+0
-                    Width: =contContent_8.Width*.975
+                    Width: =contContent_6.Width*.975
                     X: =5+0
+                    Y: =contContent_6.Y+8
                     ZIndex: =5
 
-                    contCard4TitleLabel_3 As groupContainer.manualLayoutContainer:
+                    contCard4TitleLabel_1 As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(70,71,117,1)
                         Height: =40
                         Width: =Parent.Width
@@ -416,7 +402,7 @@ scrRequests As screen:
                         Y: =0+0
                         ZIndex: =1
 
-                        Label4_4 As Label:
+                        Label4_2 As Label:
                             Alignment: =Align.Left
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
@@ -427,10 +413,10 @@ scrRequests As screen:
                             Text: ="Details"
                             Width: =320
                             X: =8
-                            Y: =Parent.Height*.5-Label4_4.Height*.5
+                            Y: =Parent.Height*.5-Label4_2.Height*.5
                             ZIndex: =1
 
-                        Icon6_1 As icon.Add:
+                        Icon6 As icon.Add:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             Color: =RGBA(255, 255, 255, 1)
                             DisabledBorderColor: =RGBA(243, 242, 241, 1)
@@ -455,7 +441,7 @@ scrRequests As screen:
                             Y: =Parent.Height*.5-Self.Height*.5
                             ZIndex: =2
 
-                        Icon4_1 As icon.Add:
+                        Icon4 As icon.Add:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             Color: =RGBA(255, 255, 255, 1)
                             DisabledBorderColor: =RGBA(243, 242, 241, 1)
@@ -466,7 +452,7 @@ scrRequests As screen:
                             HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Add
-                            OnSelect: =Set(MenuVis, true)
+                            OnSelect: =Set(varModalIssue, true)
                             PaddingBottom: =3
                             PaddingLeft: =3
                             PaddingRight: =3
@@ -475,26 +461,26 @@ scrRequests As screen:
                             PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Width: =32
-                            X: =If(Icon6_1.Visible=true, Icon6_1.X-Self.Width, Parent.Width-Self.Width*1.2)
+                            X: =If(Icon6.Visible=true, Icon6.X-Self.Width, Parent.Width-Self.Width*1.2)
                             Y: =Parent.Height*.5-Self.Height*.5
                             ZIndex: =3
 
-                    galDetRight_1 As gallery.galleryVertical:
+                    galDetRight As gallery.galleryVertical:
                         BorderColor: =RGBA(243, 242, 241, 1)
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
-                        Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
-                        Items: =LookUp(colAppDocs, Title=varRecord.Name)
+                        Height: =Parent.Height*.5-contCard4TitleLabel_1.Height
+                        Items: =LookUp(colAppDocs, Title=varRecord.Title)
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
-                        TemplateSize: =Parent.Height*.5-contCard4TitleLabel_3.Height
-                        Visible: =If(varDetVis="Nope", false, true)
+                        TemplateSize: =Parent.Height*.5-contCard4TitleLabel_1.Height
+                        Visible: =If(varSpecVis="Nope", false, true)
                         Width: =Parent.Width
                         X: =
-                        Y: =galDetLeft_1.Y*.5-contCard4TitleLabel_3.Y*.5-galDetRight_1.Height*.5+contCard4TitleLabel_3.Height*.5
+                        Y: =galDetLeft.Y*.5-contCard4TitleLabel_1.Y*.5-galDetRight.Height*.5+contCard4TitleLabel_1.Height*.5
                         ZIndex: =2
 
-                        Image6_1 As image:
+                        Image6 As image:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -516,15 +502,15 @@ scrRequests As screen:
                             Y: =
                             ZIndex: =1
 
-                    galDetLeft_1 As gallery.galleryVertical:
+                    galDetLeft As gallery.galleryVertical:
                         BorderColor: =RGBA(243, 242, 241, 1)
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
-                        Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
+                        Height: =Parent.Height*.5-contCard4TitleLabel_1.Height
                         Items: |-
                             =With(
                                 {
-                                    records: Filter(colIssues, Title=Gallery7_1.Selected.Name)
+                                    records: Filter(colIssues, Title=Gallery7.Selected.Title)
                                 },
                                 ForAll(
                                     Sequence(CountRows(records)),
@@ -541,26 +527,26 @@ scrRequests As screen:
                         Visible: =If(varSpecVis="Nope", false, true)
                         Width: =Parent.Width
                         X: =
-                        Y: =Parent.Height*.5+contCard4TitleLabel_3.Height-16
+                        Y: =Parent.Height*.5+contCard4TitleLabel_1.Height-16
                         ZIndex: =3
 
-                        Rectangle6_1 As rectangle:
+                        Rectangle6 As rectangle:
                             BorderColor: =RGBA(243, 242, 241, 1)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             DisabledFill: =RGBA(200, 198, 196, 1)
                             Fill: =RGBA(70, 71, 117, 1)
                             FocusedBorderColor: =RGBA(98, 100, 167, 1)
-                            Height: =lblReportedBy_1.Height*1.33
+                            Height: =lblReportedBy.Height*1.33
                             HoverFill: =RGBA(70, 71, 117, 1)
                             OnSelect: =Select(Parent)
                             PressedFill: =RGBA(98, 100, 167, 1)
-                            Width: =789.11
+                            Width: =Parent.Width
                             X: =0+0
                             Y: =0+0
                             ZIndex: =1
 
-                        lblReportedBy_1 As Label:
+                        lblReportedBy As Label:
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
@@ -573,7 +559,7 @@ scrRequests As screen:
                             Y: =8
                             ZIndex: =2
 
-                        valReportedBy_1 As Label:
+                        valReportedBy As Label:
                             Alignment: =Align.Left
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
@@ -581,13 +567,13 @@ scrRequests As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.RequestedBy
-                            Width: =lblReportedBy_1.Width*1.2
-                            X: =lblReportedBy_1.X+lblReportedBy_1.Width
-                            Y: =lblReportedBy_1.Y
+                            Text: =varRecord.ReportedBy
+                            Width: =lblReportedBy.Width*1.2
+                            X: =lblReportedBy.X+lblReportedBy.Width
+                            Y: =lblReportedBy.Y
                             ZIndex: =3
 
-                        lblIssueStatus_5 As Label:
+                        lblIssueStatus As Label:
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
@@ -595,12 +581,12 @@ scrRequests As screen:
                             PCFTeamsTheme: =TeamsTheme.Default
                             Text: |-
                                 ="Date Reported:"
-                            Width: =lblReportedBy_1.Width
-                            X: =Parent.TemplateWidth-lblIssueStatus_5.Width-valIssueStatus_5.Width*1.1
-                            Y: =lblReportedBy_1.Y
+                            Width: =lblReportedBy.Width
+                            X: =Parent.TemplateWidth-lblIssueStatus.Width-valIssueStatus.Width*1.1
+                            Y: =lblReportedBy.Y
                             ZIndex: =4
 
-                        valIssueStatus_5 As Label:
+                        valIssueStatus As Label:
                             Alignment: =Align.Center
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
@@ -608,13 +594,13 @@ scrRequests As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.DateofInformation
-                            Width: =valReportedBy_1.Width
-                            X: =lblIssueStatus_5.X+lblIssueStatus_5.Width
-                            Y: =lblReportedBy_1.Y
+                            Text: =varRecord.Date
+                            Width: =valReportedBy.Width
+                            X: =lblIssueStatus.X+lblIssueStatus.Width
+                            Y: =lblReportedBy.Y
                             ZIndex: =5
 
-                        lblIssueStatus_6 As Label:
+                        lblIssueStatus_1 As Label:
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             OnSelect: =Select(Parent)
@@ -623,23 +609,23 @@ scrRequests As screen:
                                 ="Details:"
                             Width: =Parent.TemplateWidth*.25
                             X: =8
-                            Y: =lblIssueStatus_5.Y+lblReportedBy_1.Height*1.5
+                            Y: =lblIssueStatus.Y+lblReportedBy.Height*1.5
                             ZIndex: =6
 
-                        valIssueStatus_6 As Label:
+                        valIssueStatus_1 As Label:
                             Alignment: =Align.Left
                             DisplayMode: =DisplayMode.Edit
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.FeatureDetails
+                            Text: =varRecord.IssueNotes
                             VerticalAlignment: =VerticalAlign.Top
-                            Width: =Parent.TemplateWidth-lblIssueStatus_6.Width
-                            X: =valReportedBy_1.X
-                            Y: =lblIssueStatus_5.Y+lblReportedBy_1.Height*1.5
+                            Width: =Parent.TemplateWidth-lblIssueStatus_1.Width
+                            X: =valReportedBy.X
+                            Y: =lblIssueStatus.Y+lblReportedBy.Height*1.5
                             ZIndex: =7
 
-                        lblIssueStatus_4 As Label:
+                        lblIssueStatus_2 As Label:
                             Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
                             FontWeight: =FontWeight.Normal
@@ -648,25 +634,26 @@ scrRequests As screen:
                             PCFTeamsTheme: =TeamsTheme.Default
                             Text: |-
                                 ="Assigned:"
-                            Width: =lblReportedBy_1.Width
-                            X: =valReportedBy_1.X+valReportedBy_1.Width*1.5
-                            Y: =lblReportedBy_1.Y
+                            Width: =lblReportedBy.Width
+                            X: =valReportedBy.X+valReportedBy.Width*1.5
+                            Y: =lblReportedBy.Y
                             ZIndex: =8
 
-                        valIssueStatus_4 As Label:
+                        valIssueStatus_2 As Label:
                             Alignment: =Align.Left
+                            Color: =RGBA(255, 255, 255, 1)
                             DisplayMode: =DisplayMode.Edit
-                            Height: =lblIssueStatus_4.Height
+                            Height: =lblIssueStatus_2.Height
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.Category
+                            Text: =varRecord.AssignedTo
                             VerticalAlignment: =VerticalAlign.Top
-                            Width: =valReportedBy_1.Width
-                            X: =lblIssueStatus_4.X+lblIssueStatus_4.Width
-                            Y: =lblReportedBy_1.Y
+                            Width: =valReportedBy.Width
+                            X: =lblIssueStatus_2.X+lblIssueStatus_2.Width
+                            Y: =lblReportedBy.Y
                             ZIndex: =9
 
-                        lblIssueStatus_7 As Label:
+                        lblIssueStatus_3 As Label:
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             OnSelect: =Select(Parent)
@@ -675,19 +662,241 @@ scrRequests As screen:
                                 ="Notes:"
                             Width: =Parent.TemplateWidth*.25
                             X: =8.555000000000007
-                            Y: =valIssueStatus_6.Y+valIssueStatus_6.Height+8
+                            Y: =valIssueStatus_1.Y+valIssueStatus_1.Height+8
                             ZIndex: =10
 
-                        valIssueStatus_7 As Label:
+                        valIssueStatus_3 As Label:
                             Alignment: =Align.Left
                             DisplayMode: =DisplayMode.Edit
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.FeatureDetails
+                            Text: =varRecord.IssueNotes
                             VerticalAlignment: =VerticalAlign.Top
-                            Width: =valIssueStatus_6.Width
-                            X: =valReportedBy_1.X
-                            Y: =lblIssueStatus_7.Y
+                            Width: =valIssueStatus_1.Width
+                            X: =valReportedBy.X
+                            Y: =lblIssueStatus_3.Y
                             ZIndex: =11
+
+    grpMenu As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =23
+
+        ModalMenu_2 As ModalMenu:
+            Height: =ModalMenu_2.varHeight
+            varTitle: ="Report a New Issue"
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varWidth
+            ZIndex: =9
+
+        Icon5 As icon.Add:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(98, 100, 167, 1)
+            DisabledBorderColor: =RGBA(243, 242, 241, 1)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Height: =32
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varModalIssue, false)
+            PaddingBottom: =3
+            PaddingLeft: =3
+            PaddingRight: =3
+            PaddingTop: =3
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =false
+            Width: =32
+            X: =ModalMenu_2.varLineLoc.LineX+ModalMenu_2.varLineLoc.LineWidth-Self.Width*.2
+            Y: =(ModalMenu_2.varLineLoc.LineY-Self.Height*1.5)
+            ZIndex: =10
+
+        "cmbIssueCat As 'Combo box'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: =["Power Apps", "Power Automate", "Power BI", "Power Virtual Agents", "DataVerse"]
+            PCFTeamsTheme: =TeamsTheme.Default
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varLineLoc.LineWidth-lblIssueCat.Width
+            X: =lblIssueCat.X+lblIssueCat.Width
+            Y: =lblIssueCat.Y
+            ZIndex: =11
+
+            Value1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Value"
+                FieldName: ="Value"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =6
+
+        lblIssueCat As Label:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Category"
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varLineLoc.LineWidth*.2
+            X: =ModalMenu_2.varLineLoc.LineX
+            Y: =ModalMenu_2.varLineLoc.LineY+8
+            ZIndex: =12
+
+        lblIssueTitle As Label:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Title"
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varLineLoc.LineWidth*.2
+            X: =ModalMenu_2.varLineLoc.LineX
+            Y: =lblIssueCat.Y+lblIssueCat.Height*1.5
+            ZIndex: =13
+
+        "txtIssueTitle As 'Text box'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Placeholder: ="Short Title of Issue"
+            Value: =""
+            Visible: =varModalIssue
+            Width: =cmbIssueCat.Width
+            X: =cmbIssueCat.X
+            Y: =lblIssueTitle.Y
+            ZIndex: =14
+
+        lblIssueDesc As Label:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Description"
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varLineLoc.LineWidth*.2
+            X: =ModalMenu_2.varLineLoc.LineX
+            Y: =lblIssueTitle.Y+lblIssueCat.Height*1.5
+            ZIndex: =15
+
+        "txtIssueDesc As 'Text box'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =96
+            Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+            PCFTeamsTheme: =TeamsTheme.Default
+            Placeholder: ="Short Title of Issue, please include as many details as possible to help reproduce."
+            Value: =""
+            Visible: =varModalIssue
+            Width: =cmbIssueCat.Width
+            X: =cmbIssueCat.X
+            Y: =lblIssueDesc.Y
+            ZIndex: =16
+
+        UploadedImage1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Height: =AddMediaButton1.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+            ImagePosition: =ImagePosition.Fill
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Visible: =varModalIssue
+            Width: =AddMediaButton1.Width
+            X: =AddMediaButton1.X
+            Y: =AddMediaButton1.Y
+            ZIndex: =20
+
+        AddMediaButton1 As addMedia:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(200, 198, 196, 1)
+            DisabledFill: =RGBA(243, 242, 241, 1)
+            Fill: =RGBA(98, 100, 167, 1)
+            Font: =Font.'Segoe UI'
+            Height: =ModalMenu_2.Height*.25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(98, 100, 167, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(98, 100, 167, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+            Size: =25
+            Text: ="click to add a screenshot"
+            Visible: =varModalIssue
+            Width: =ModalMenu_2.varLineLoc.LineWidth*.5
+            X: =ModalMenu_2.varLineLoc.LineX+ModalMenu_2.varLineLoc.LineWidth*.5-AddMediaButton1.Width*.5
+            Y: =ModalMenu_2.varBoxHeight-AddMediaButton1.Height*1.25
+            ZIndex: =21
+
+        Button5 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: |
+                =Patch(
+                    colIssues,
+                    Defaults(colIssues),
+                    {
+                        Category: cmbIssueCat.Selected.Value,
+                        Title: txtIssueTitle.Value,
+                        Details: txtIssueDesc.Value,
+                        ReportedBy: User().FullName,
+                        Date: Today(),
+                        IssueStatus: "New"
+                    }
+                );
+                Set(
+                    varDemoFormAttachmentControl,
+                    JSON(
+                        UploadedImage1.Image,
+                        JSONFormat.IncludeBinaryData
+                    )
+                );
+                Set(
+                    VarBase64Only,
+                    Mid(
+                        varDemoFormAttachmentControl,
+                        Find(
+                            ",",
+                            varDemoFormAttachmentControl
+                        ) + 1,
+                        Len(varDemoFormAttachmentControl) - Find(
+                            ",",
+                            varDemoFormAttachmentControl
+                        ) - 1
+                    )
+                );
+                Notify("Issue Reported!");
+                Set(
+                    varModalIssue,
+                    false
+                );
+                AppImagetoSPO.Run(
+                    txtIssueTitle.Value,
+                    {
+                        contentBytes: UploadedImage1.Image,
+                        name: Text(
+                            Now(),
+                            "yyMMddhhmmss"
+                        )
+                    }
+                );
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Submit"
+            Visible: =varModalIssue
+            Width: =96
+            X: =ModalMenu_2.varLineLoc.LineX+ModalMenu_2.varLineLoc.LineWidth-Button5.Width
+            Y: =ModalMenu_2.varBoxHeight-Button5.Height*.125
+            ZIndex: =22
 

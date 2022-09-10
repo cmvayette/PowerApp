@@ -107,9 +107,10 @@
   },
   "ScreenOrder": [
     "Landing",
-    "scrIssueLog",
-    "scrRoadmap",
-    "scrKnowledgeBase",
-    "scrRequests"
+    "Issue Log Screen",
+    "Roadmap Screen",
+    "Knowedge Base Screen",
+    "Requests Screen",
+    "Test Git push Screen"
   ]
 }
