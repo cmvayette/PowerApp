@@ -8,7 +8,7 @@ Landing As screen:
             Now()
         ); Set(VarConnectors, 25);
         
-        ClearCollect(colProjects, {}); ClearCollect(colProjectItems, {}); Set(varCurrentScreen, "Status Report"); Set(varIconX, Icon2.X);Set(varLabelX, Label7.X);
+        ClearCollect(colProjects, {}); ClearCollect(colProjectItems, {}); ClearCollect(colArticles, { Name: "This Thing", DateSubmitted: "2/2/2022", AuthorName: "Corey Vayette", FirstParagraph: "This thing is a thing, it doesn't do lots, just things." }); Set(varCurrentScreen, "Status Report"); Set(varIconX, Icon2.X);Set(varLabelX, Label7.X);
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
@@ -186,13 +186,6 @@ Landing As screen:
                 Y: =8
                 ZIndex: =2
 
-    ModalMenu_1 As ModalMenu:
-        Height: =ModalMenu_1.varHeight
-        varTitle: ="New Report"
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varWidth
-        ZIndex: =4
-
     Icon3 As icon.Add:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(243, 242, 241, 1)
@@ -215,7 +208,7 @@ Landing As screen:
         Width: =32
         X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth-Icon3.Width*2
         Y: =ModalMenu_1.varBoxY+Icon3.Height*.5
-        ZIndex: =5
+        ZIndex: =4
 
     "txtCat1Title As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -227,7 +220,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =ModalMenu_1.varLineLoc.LineY*1.4
-        ZIndex: =6
+        ZIndex: =5
 
     "txtCat1Body As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -240,7 +233,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =txtCat1Title.Y+txtCat1Title.Height+8
-        ZIndex: =7
+        ZIndex: =6
 
     "txtCat2Title As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -252,7 +245,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =txtCat1Body.Y+txtCat1Body.Height+32
-        ZIndex: =8
+        ZIndex: =7
 
     "txtCat2Body As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -265,7 +258,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =txtCat2Title.Y+txtCat2Title.Height+8
-        ZIndex: =9
+        ZIndex: =8
 
     "txtCat3Title As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -277,7 +270,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =txtCat2Body.Y+txtCat1Body.Height+32
-        ZIndex: =10
+        ZIndex: =9
 
     "txtCat3Body As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -290,7 +283,7 @@ Landing As screen:
         Width: =ModalMenu_1.varLineLoc.LineWidth
         X: =ModalMenu_1.varLineLoc.LineX
         Y: =txtCat3Title.Y+txtCat3Title.Height+8
-        ZIndex: =11
+        ZIndex: =10
 
     Button3 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -318,7 +311,7 @@ Landing As screen:
         Width: =96
         X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth*.6
         Y: =ModalMenu_1.Y+ModalMenu_1.varBoxHeight*.975
-        ZIndex: =12
+        ZIndex: =11
 
     Button4 As Button:
         ButtonType: ="Secondary"
@@ -331,7 +324,7 @@ Landing As screen:
         Width: =96
         X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth*.3
         Y: =ModalMenu_1.Y+ModalMenu_1.varBoxHeight*.975
-        ZIndex: =13
+        ZIndex: =12
 
     "txtReportName As 'Text box'":
         DisplayMode: =DisplayMode.Edit
@@ -343,14 +336,14 @@ Landing As screen:
         Width: =txtCat1Title.Width
         X: =txtCat1Title.X
         Y: =ModalMenu_1.varLineLoc.LineY+8
-        ZIndex: =14
+        ZIndex: =13
 
     contBody As groupContainer.manualLayoutContainer:
         Height: =Parent.Height-contBody.Y
         Width: =Parent.Width
         X: =
         Y: =contHeader.Y+contHeader.Height
-        ZIndex: =15
+        ZIndex: =14
 
         contContent As groupContainer.manualLayoutContainer:
             Height: =Parent.Height
@@ -359,19 +352,12 @@ Landing As screen:
             Y: =
             ZIndex: =1
 
-            ShadowBoxCard_2 As ShadowBoxCard:
-                Height: =Parent.Height
-                ShadowBoxHeight: =ShadowBoxCard_2.Height
-                ShadowBoxWidth: =Parent.Width
-                Visible: =false
-                Width: =Parent.Width
-
             contConnectorStatus As groupContainer.manualLayoutContainer:
                 Height: =Parent.Height/4
                 Width: =Parent.Width*.33
                 X: =Parent.Width*.1
                 Y: =contIssues.Y+contIssues.Height+16
-                ZIndex: =2
+                ZIndex: =1
 
                 Label3 As Label:
                     Alignment: =Align.Center
@@ -411,7 +397,7 @@ Landing As screen:
                 Width: =Parent.Width*.975
                 X: =
                 Y: =32
-                ZIndex: =3
+                ZIndex: =2
 
                 ShadowBoxCard_3 As ShadowBoxCard:
                     Height: =Parent.Height
@@ -476,7 +462,7 @@ Landing As screen:
                 Width: =Parent.Width*.33
                 X: =Parent.Width*.56
                 Y: =contIssues.Y+contIssues.Height+16
-                ZIndex: =4
+                ZIndex: =3
 
                 Label3_1 As Label:
                     Alignment: =Align.Center
@@ -505,10 +491,8 @@ Landing As screen:
                     Height: =Gateway_1.contHeight
                     TotalPhase: |-
                         =CountRows(
-                            Filter(
-                                'Project Work Items',
-                                Milestone.'Project Milestone' = GUID("3edf8289-6d90-ec11-8d20-001dd8101415") && Project.Project = GUID("3cdf8289-6d90-ec11-8d20-001dd8101415")
-                            )
+                        
+                                colProjectItems
                         )
                     Width: =Gateway_1.contWidth-16
                     X: =contGateWay.Width*.5-Gateway_1.Width*.5
@@ -520,7 +504,7 @@ Landing As screen:
                 Width: =Parent.Width*.98
                 X: =contIssues.X
                 Y: =contConnectorStatus.Y+contConnectorStatus.Height+16
-                ZIndex: =5
+                ZIndex: =4
 
                 Label3_2 As Label:
                     Alignment: =Align.Center
@@ -535,7 +519,7 @@ Landing As screen:
                     Width: =Parent.Width
                     X: =0
                     Y: =
-                    ZIndex: =4
+                    ZIndex: =1
 
                 ShadowBoxCard_5 As ShadowBoxCard:
                     Height: =Parent.Height
@@ -543,14 +527,14 @@ Landing As screen:
                     ShadowBoxWidth: =ShadowBoxCard_5.Width
                     Width: =ShadowBoxCard_3.Width
                     X: =contIssues.X
-                    ZIndex: =5
+                    ZIndex: =2
 
                 contEventsLog As groupContainer.manualLayoutContainer:
                     Height: =Parent.Height*.9
                     Width: =Parent.Width*.965
                     X: =Parent.Width*.02
                     Y: =3
-                    ZIndex: =6
+                    ZIndex: =3
 
                     RecentHappenings_1 As RecentHappenings:
                         Height: =RecentHappenings_1.varHeight
@@ -567,7 +551,7 @@ Landing As screen:
                         Items: |-
                             =With(
                                 {
-                                    records: PlatformHappenings },
+                                    records: colArticles },
                                 ForAll(
                                     Sequence(CountRows(records)),
                                     Patch(
@@ -683,6 +667,21 @@ Landing As screen:
                         Y: =16
                         ZIndex: =3
 
+            ShadowBoxCard_2 As ShadowBoxCard:
+                Height: =Parent.Height
+                ShadowBoxHeight: =ShadowBoxCard_2.Height
+                ShadowBoxWidth: =Parent.Width
+                Visible: =false
+                Width: =Parent.Width
+                ZIndex: =5
+
+    ModalMenu_1 As ModalMenu:
+        Height: =ModalMenu_1.varHeight
+        varTitle: ="New Report"
+        Visible: =false
+        Width: =ModalMenu_1.varWidth
+        ZIndex: =17
+
     grpModalReport As group:
         Height: =5
         Width: =5
@@ -705,7 +704,7 @@ Landing As screen:
             Width: =Landing.Width
             X: =0+0
             Y: =0+0
-            ZIndex: =16
+            ZIndex: =15
 
         ShadowBoxMap_6 As ShadowBoxMap:
             Height: =ShadowBoxMap_6.ShadowBoxHeight
@@ -713,5 +712,5 @@ Landing As screen:
             Width: =ShadowBoxMap_6.ShadowBoxWidth
             X: =Parent.Width*.5-Self.Width*.5
             Y: =Parent.Height*.1
-            ZIndex: =17
+            ZIndex: =16
 

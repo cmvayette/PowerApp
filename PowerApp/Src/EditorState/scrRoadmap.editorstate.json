@@ -58,7 +58,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -184,7 +184,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -304,7 +304,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_10",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -430,7 +430,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_11",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -566,7 +566,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_12",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -702,7 +702,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_13",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -838,7 +838,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_14",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -974,7 +974,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_15",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1110,7 +1110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_16",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1246,7 +1246,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_17",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1366,7 +1366,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_18",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1476,7 +1476,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_19",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1602,7 +1602,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1722,7 +1722,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_20",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1848,7 +1848,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_21",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1984,7 +1984,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_22",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2120,7 +2120,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_23",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2256,7 +2256,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_24",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2392,7 +2392,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_25",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2528,7 +2528,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_26",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2664,7 +2664,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_27",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2800,7 +2800,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_28",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2936,7 +2936,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_3",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3072,7 +3072,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_4",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3192,7 +3192,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_5",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3318,7 +3318,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_6",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3454,7 +3454,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_7",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3590,7 +3590,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_8",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3726,7 +3726,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button6_9",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6689,7 +6689,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7",
-      "ParentIndex": 6,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6842,7 +6842,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7_1",
-      "ParentIndex": 6,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6995,7 +6995,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7_2",
-      "ParentIndex": 6,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7148,7 +7148,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7_3",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7301,7 +7301,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7_4",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7401,14 +7401,7 @@
         "Orientation",
         "LoadingSpinner",
         "LoadingSpinnerColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "OnVisible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "OnVisible"
       ],
       "IsAutoGenerated": false,
       "IsComponentDefinition": false,
