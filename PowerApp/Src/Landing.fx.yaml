@@ -21,11 +21,17 @@ Landing As screen:
         );
         ClearCollect(
             colArticles,
-            {
+               {
                 Name: "This Thing",
+                Cat1Title: "This Thing",
+                FirstParagraph: "This thing is a thing, it doesn't do lots, just things.",
+                Cat2Title: "",
+                SecondParagraph: "",
+                Cat3Title: "",
+                ThirdParagraph: "",
+                Author: User().Email,
                 DateSubmitted: "2/2/2022",
-                AuthorName: "Corey Vayette",
-                FirstParagraph: "This thing is a thing, it doesn't do lots, just things."
+                AuthorName: "Corey Vayette"
             }
         );
         Set(
@@ -41,7 +47,8 @@ Landing As screen:
                 Date: DateValue(02/22/2022),
                 ReportedBy: "",
                 IssueStatus: "",
-                AssignedTo: ""
+                AssignedTo: "",
+                Details: ""
             }
         );
         Set(
@@ -334,8 +341,8 @@ Landing As screen:
         Height: =32
         OnSelect: |-
             =Patch(
-                PlatformHappenings,
-                Defaults(PlatformHappenings),
+                colArticles,
+                Defaults(colArticles),
                 {
                     Name: txtReportName.Value,
                     Cat1Title: txtCat1Title.Value,
@@ -457,27 +464,27 @@ Landing As screen:
                             {
                                 Name: "Power Apps",
                                 Image: PowerApps_scalable,
-                                IssueCount: CountRows(Filter(PlatformIssues, Category="Power Apps"))
+                                IssueCount: CountRows(Filter(colIssues, Category="Power Apps"))
                             },
                             {
                                 Name: "Power Automate",
                                 Image: PowerAutomate_scalable,
-                                 IssueCount: CountRows(Filter(PlatformIssues, Category="Power Automate"))
+                                 IssueCount: CountRows(Filter(colIssues, Category="Power Automate"))
                             },
                             {
                                 Name: "Power BI",
                                 Image: PowerBI_scalable,
-                                 IssueCount: CountRows(Filter(PlatformIssues, Category="Power BI"))
+                                 IssueCount: CountRows(Filter(colIssues, Category="Power BI"))
                             },
                             {
                                 Name: "Power Virtual Agents",
                                 Image: PowerVirtualAgents_scalable,
-                                 IssueCount: CountRows(Filter(PlatformIssues, Category="Power Virtual Agents"))
+                                 IssueCount: CountRows(Filter(colIssues, Category="Power Virtual Agents"))
                             },
                             {
                                 Name: "DataVerse",
                                 Image: Dataverse_scalable,
-                                 IssueCount: CountRows(Filter(PlatformIssues, Category="DataVerse"))
+                                 IssueCount: CountRows(Filter(colIssues, Category="DataVerse"))
                             }
                         )
                     varHeight: =Parent.Height

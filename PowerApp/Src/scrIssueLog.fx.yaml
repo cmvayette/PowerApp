@@ -843,18 +843,18 @@ scrIssueLog As screen:
 
         Button5 As Button:
             DisplayMode: =DisplayMode.Edit
-            FontWeight: =FontWeight.Lighter
+            FontWeight: =FontWeight.Semibold
             Height: =32
             OnSelect: |
                 =Patch(
-                    PlatformIssues,
-                    Defaults(PlatformIssues),
+                    colIssues,
+                    Defaults(colIssues),
                     {
                         Category: cmbIssueCat.Selected.Value,
-                        Name: txtIssueTitle.Value,
+                        Title: txtIssueTitle.Value,
                         Details: txtIssueDesc.Value,
-                        Reportedby: User().FullName,
-                        DateReported: Today(),
+                        ReportedBy: User().FullName,
+                        Date: Today(),
                         IssueStatus: "New"
                     }
                 );
