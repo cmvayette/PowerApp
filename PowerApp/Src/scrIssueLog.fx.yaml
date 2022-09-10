@@ -8,6 +8,7 @@ scrIssueLog As screen:
 
     PowerPlatformMenu_5 As PowerPlatformMenu:
         Height: =565.44
+        Lists: =PowerPlatformMenu_5.MenuList
         MenuList: |-
             =Table(
                 {
@@ -48,6 +49,7 @@ scrIssueLog As screen:
 
         PowerPlatformMenu_6 As PowerPlatformMenu:
             Height: =96
+            Lists: =PowerPlatformMenu_6.MenuList
             MenuList: |-
                 =Table(
                     {

@@ -1463,6 +1463,7 @@ scrRoadmap As screen:
 
     PowerPlatformMenu_7 As PowerPlatformMenu:
         Height: =565.44
+        Lists: =PowerPlatformMenu_7.MenuList
         MenuList: |-
             =Table(
                 {
@@ -1503,6 +1504,7 @@ scrRoadmap As screen:
 
         PowerPlatformMenu_8 As PowerPlatformMenu:
             Height: =96
+            Lists: =PowerPlatformMenu_8.MenuList
             MenuList: |-
                 =Table(
                     {

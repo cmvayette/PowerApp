@@ -2,7 +2,7 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "Children": [],
     "ControlPropertyState": [
       "Fill",
@@ -23,7 +23,7 @@
       "TextVis",
       "MenuList"
     ],
-    "LastModifiedTimestamp": "637984284694315015",
+    "LastModifiedTimestamp": "637984308959428166",
     "Name": "PowerPlatformMenu",
     "Rules": [
       {
@@ -89,7 +89,7 @@
     ]
   },
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
     "Name": "PowerPlatformMenu",
@@ -143,7 +143,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984284694315015",
+  "LastModifiedTimestamp": "637984308959428166",
   "Name": "cf94202d07c244f49aeb739f75d716ac",
   "OverridableProperties": {},
   "Version": "637807343236219360"

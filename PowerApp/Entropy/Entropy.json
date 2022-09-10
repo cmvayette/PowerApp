@@ -458,7 +458,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/10/2022 17:58:48",
+  "HeaderLastSavedDateTimeUTC": "09/10/2022 18:22:19",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "01e7060a-4fe9-420d-a04e-aa031c2e7124": "\"/providers/microsoft.powerapps/apis/shared_planner/connections/d4e64a9fba9644029b28f96c32ed8b85\"",
@@ -1078,7 +1078,7 @@
       "screen": 6
     },
     "DeserializationLoadTime": 3.1825474,
-    "ErrorCount": 15
+    "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

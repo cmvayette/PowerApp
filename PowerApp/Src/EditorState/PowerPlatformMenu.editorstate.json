@@ -1,7 +1,7 @@
 {
   "ControlStates": {
     "PowerPlatformMenu": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         "Height",
