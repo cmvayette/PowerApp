@@ -1,7 +1,7 @@
 {
   "ControlStates": {
     "Component1": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         "Height",

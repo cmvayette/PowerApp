@@ -1,0 +1,160 @@
+Component2 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "txtCat1Title As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 1 Title"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =Parent.Width*.5-Self.Width*.5
+        Y: =txtReportName.Y+txtReportName.Height+8
+        ZIndex: =1
+
+    "txtCat1Body As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =64
+        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 1 Body"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =txtCat1Title.X
+        Y: =txtCat1Title.Y+txtCat1Title.Height+8
+        ZIndex: =2
+
+    "txtCat2Title As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 2 Title"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =txtCat1Title.X
+        Y: =txtCat1Body.Y+txtCat1Body.Height+32
+        ZIndex: =3
+
+    "txtCat2Body As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =64
+        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 2 Body"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =txtCat1Title.X
+        Y: =txtCat2Title.Y+txtCat2Title.Height+8
+        ZIndex: =4
+
+    "txtCat3Title As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 3 Title"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =txtCat1Title.X
+        Y: =txtCat2Body.Y+txtCat1Body.Height+32
+        ZIndex: =5
+
+    "txtCat3Body As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =64
+        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Category 3 Body"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =ModalMenu_1.varLineLoc.LineWidth
+        X: =txtCat1Title.X
+        Y: =txtCat3Title.Y+txtCat3Title.Height+8
+        ZIndex: =6
+
+    Button3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =Patch(
+                colArticles,
+                Defaults(colArticles),
+                {
+                    Name: txtReportName.Value,
+                    Cat1Title: txtCat1Title.Value,
+                    FirstParagraph: txtCat1Body.Value,
+                    Cat2Title: txtCat2Title.Value,
+                    SecondParagraph: txtCat2Body.Value,
+                    Cat3Title: txtCat3Title.Value,
+                    ThirdParagraph: txtCat3Body.Value,
+                    Author: User().Email,
+                    DateSubmitted: Today(),
+                    AuthorName: User().FullName
+                }
+            ); Reset(txtCat1Body);Reset(txtCat1Title); Reset(txtReportName); Reset(txtCat2Title); Reset(txtCat2Body); Reset(txtCat3Title); Reset(txtCat3Body); Notify("Input Saved"); Set(varModalMenuReport, false);
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Submit"
+        Visible: =varModalMenuReport
+        Width: =96
+        X: =Parent.Width*.66-Self.Width*.5
+        Y: =Parent.Height-Self.Height*2
+        ZIndex: =7
+
+    Button4 As Button:
+        ButtonType: ="Secondary"
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Reset(txtCat1Body);Reset(txtCat1Title); Reset(txtReportName); Reset(txtCat2Title); Reset(txtCat2Body); Reset(txtCat3Title); Reset(txtCat3Body)
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Clear"
+        Visible: =varModalMenuReport
+        Width: =96
+        X: =Parent.Width*.33-Self.Width*.5
+        Y: =Button3.Y
+        ZIndex: =8
+
+    "txtReportName As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Name"
+        Value: =""
+        Visible: =varModalMenuReport
+        Width: =txtCat1Title.Width
+        X: =txtCat1Title.X
+        Y: =Parent.Height*.1
+        ZIndex: =9
+
+    Icon3 As icon.Add:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(243, 242, 241, 1)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =32
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(varModalMenuReport, false)
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =varModalMenuReport
+        Width: =32
+        X: =Parent.Width-Icon3.Width*2
+        Y: =Icon3.Height*.5
+        ZIndex: =10
+

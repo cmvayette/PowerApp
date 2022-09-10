@@ -2,7 +2,7 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "Children": [
       {
         "AllowAccessToGlobals": true,
@@ -75,7 +75,7 @@
         "Name": "valParty",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 276,
+        "PublishOrderIndex": 266,
         "Rules": [
           {
             "Category": "Data",
@@ -240,7 +240,7 @@
         "Name": "valConnectorCount",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 277,
+        "PublishOrderIndex": 267,
         "Rules": [
           {
             "Category": "Data",
@@ -381,7 +381,7 @@
         "Name": "lblConnectorCount",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 278,
+        "PublishOrderIndex": 268,
         "Rules": [
           {
             "Category": "Data",
@@ -518,7 +518,7 @@
         "Name": "Rectangle1",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 279,
+        "PublishOrderIndex": 269,
         "Rules": [
           {
             "Category": "Design",
@@ -698,7 +698,7 @@
         "Name": "lblParity",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 280,
+        "PublishOrderIndex": 270,
         "Rules": [
           {
             "Category": "Data",
@@ -863,7 +863,7 @@
         "Name": "valConnectorTotal",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 281,
+        "PublishOrderIndex": 271,
         "Rules": [
           {
             "Category": "Data",
@@ -1004,7 +1004,7 @@
         "Name": "lblConnectorTotal",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 282,
+        "PublishOrderIndex": 272,
         "Rules": [
           {
             "Category": "Data",
@@ -1208,7 +1208,7 @@
     ]
   },
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
     "Name": "Connectorsv2",

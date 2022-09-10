@@ -2473,7 +2473,7 @@
       "Type": "ControlInfo"
     },
     "ProjectGallery": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         {

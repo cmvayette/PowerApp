@@ -79,7 +79,7 @@
         "Name": "rectBackground_1",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 360,
+        "PublishOrderIndex": 350,
         "Rules": [
           {
             "Category": "Design",
@@ -271,7 +271,7 @@
         "Name": "rectMenu_1",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 361,
+        "PublishOrderIndex": 351,
         "Rules": [
           {
             "Category": "Design",
@@ -455,7 +455,7 @@
         "Name": "HtmlText2_1",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 362,
+        "PublishOrderIndex": 352,
         "Rules": [
           {
             "Category": "Data",
@@ -645,7 +645,7 @@
         "Name": "Icon5_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 363,
+        "PublishOrderIndex": 353,
         "Rules": [
           {
             "Category": "Design",
@@ -924,7 +924,7 @@
         "Name": "lblMenuTitle_1",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 364,
+        "PublishOrderIndex": 354,
         "Rules": [
           {
             "Category": "Data",
@@ -1085,7 +1085,7 @@
         "Name": "rectBreakBreak_1",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 365,
+        "PublishOrderIndex": 355,
         "Rules": [
           {
             "Category": "Design",
@@ -1249,7 +1249,7 @@
         "Name": "lblIssueCat_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 366,
+        "PublishOrderIndex": 356,
         "Rules": [
           {
             "Category": "Data",
@@ -1355,7 +1355,7 @@
             "Name": "Value1_3",
             "Parent": "cmbIssueCat_3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 368,
+            "PublishOrderIndex": 358,
             "Rules": [
               {
                 "Category": "Data",
@@ -1487,7 +1487,7 @@
         "Name": "cmbIssueCat_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 367,
+        "PublishOrderIndex": 357,
         "Rules": [
           {
             "Category": "Data",
@@ -1617,7 +1617,7 @@
         "Name": "lblIssueTitle_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 369,
+        "PublishOrderIndex": 359,
         "Rules": [
           {
             "Category": "Data",
@@ -1755,7 +1755,7 @@
         "Name": "txtIssueTitle_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 370,
+        "PublishOrderIndex": 360,
         "Rules": [
           {
             "Category": "Data",
@@ -1891,7 +1891,7 @@
         "Name": "lblIssueTitle_4",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 371,
+        "PublishOrderIndex": 361,
         "Rules": [
           {
             "Category": "Data",
@@ -2029,7 +2029,7 @@
         "Name": "txtIssueTitle_4",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 372,
+        "PublishOrderIndex": 362,
         "Rules": [
           {
             "Category": "Data",
@@ -2165,7 +2165,7 @@
         "Name": "lblIssueDesc_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 373,
+        "PublishOrderIndex": 363,
         "Rules": [
           {
             "Category": "Data",
@@ -2318,7 +2318,7 @@
         "Name": "txtIssueDesc_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 374,
+        "PublishOrderIndex": 364,
         "Rules": [
           {
             "Category": "Data",
@@ -2469,7 +2469,7 @@
         "Name": "Button5_3",
         "Parent": "ModalMenuFeature",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 375,
+        "PublishOrderIndex": 365,
         "Rules": [
           {
             "Category": "Data",

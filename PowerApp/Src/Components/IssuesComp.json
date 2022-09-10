@@ -2,7 +2,7 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "Children": [
       {
         "AllowAccessToGlobals": true,
@@ -26,7 +26,7 @@
             "Name": "galleryTemplate3",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 273,
+            "PublishOrderIndex": 263,
             "Rules": [
               {
                 "Category": "Design",
@@ -152,7 +152,7 @@
             "Name": "Label6",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 274,
+            "PublishOrderIndex": 264,
             "Rules": [
               {
                 "Category": "Data",
@@ -327,7 +327,7 @@
             "Name": "Image1",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 275,
+            "PublishOrderIndex": 265,
             "Rules": [
               {
                 "Category": "Data",
@@ -617,7 +617,7 @@
         "Name": "Gallery2",
         "Parent": "IssuesComp",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 272,
+        "PublishOrderIndex": 262,
         "Rules": [
           {
             "Category": "Data",
@@ -976,7 +976,7 @@
     ]
   },
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
     "Name": "IssuesComp",

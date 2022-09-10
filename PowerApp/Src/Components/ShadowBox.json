@@ -2,7 +2,7 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "Children": [
       {
         "AllowAccessToGlobals": true,
@@ -73,7 +73,7 @@
         "Name": "HtmlText1",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 267,
+        "PublishOrderIndex": 257,
         "Rules": [
           {
             "Category": "Data",
@@ -263,7 +263,7 @@
         "Name": "imgJohnny5",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 268,
+        "PublishOrderIndex": 258,
         "Rules": [
           {
             "Category": "Data",
@@ -531,7 +531,7 @@
         "Name": "imgDisassembled",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 269,
+        "PublishOrderIndex": 259,
         "Rules": [
           {
             "Category": "Data",
@@ -799,7 +799,7 @@
         "Name": "Imgplatform",
         "Parent": "ShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 270,
+        "PublishOrderIndex": 260,
         "Rules": [
           {
             "Category": "Data",
@@ -1057,7 +1057,7 @@
     ]
   },
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
     "Name": "ShadowBox",

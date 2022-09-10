@@ -237,158 +237,6 @@ Landing As screen:
                 Y: =8
                 ZIndex: =2
 
-    Icon3 As icon.Add:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(243, 242, 241, 1)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Height: =32
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Cancel
-        OnSelect: =Set(varModalMenuReport, false)
-        PaddingBottom: =3
-        PaddingLeft: =3
-        PaddingRight: =3
-        PaddingTop: =3
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =varModalMenuReport
-        Width: =32
-        X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth-Icon3.Width*2
-        Y: =ModalMenu_1.varBoxY+Icon3.Height*.5
-        ZIndex: =4
-
-    "txtCat1Title As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 1 Title"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =ModalMenu_1.varLineLoc.LineY*1.4
-        ZIndex: =5
-
-    "txtCat1Body As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =64
-        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 1 Body"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =txtCat1Title.Y+txtCat1Title.Height+8
-        ZIndex: =6
-
-    "txtCat2Title As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 2 Title"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =txtCat1Body.Y+txtCat1Body.Height+32
-        ZIndex: =7
-
-    "txtCat2Body As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =64
-        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 2 Body"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =txtCat2Title.Y+txtCat2Title.Height+8
-        ZIndex: =8
-
-    "txtCat3Title As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 3 Title"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =txtCat2Body.Y+txtCat1Body.Height+32
-        ZIndex: =9
-
-    "txtCat3Body As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =64
-        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Category 3 Body"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =ModalMenu_1.varLineLoc.LineWidth
-        X: =ModalMenu_1.varLineLoc.LineX
-        Y: =txtCat3Title.Y+txtCat3Title.Height+8
-        ZIndex: =10
-
-    Button3 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: |-
-            =Patch(
-                colArticles,
-                Defaults(colArticles),
-                {
-                    Name: txtReportName.Value,
-                    Cat1Title: txtCat1Title.Value,
-                    FirstParagraph: txtCat1Body.Value,
-                    Cat2Title: txtCat2Title.Value,
-                    SecondParagraph: txtCat2Body.Value,
-                    Cat3Title: txtCat3Title.Value,
-                    ThirdParagraph: txtCat3Body.Value,
-                    Author: User().Email,
-                    DateSubmitted: Today(),
-                    AuthorName: User().FullName
-                }
-            ); Reset(txtCat1Body);Reset(txtCat1Title); Reset(txtReportName); Reset(txtCat2Title); Reset(txtCat2Body); Reset(txtCat3Title); Reset(txtCat3Body); Notify("Input Saved"); Set(varModalMenuReport, false);
-        PCFTeamsTheme: =TeamsTheme.Default
-        Text: ="Submit"
-        Visible: =varModalMenuReport
-        Width: =96
-        X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth*.6
-        Y: =ModalMenu_1.Y+ModalMenu_1.varBoxHeight*.975
-        ZIndex: =11
-
-    Button4 As Button:
-        ButtonType: ="Secondary"
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        OnSelect: =Reset(txtCat1Body);Reset(txtCat1Title); Reset(txtReportName); Reset(txtCat2Title); Reset(txtCat2Body); Reset(txtCat3Title); Reset(txtCat3Body)
-        PCFTeamsTheme: =TeamsTheme.Default
-        Text: ="Clear"
-        Visible: =varModalMenuReport
-        Width: =96
-        X: =ModalMenu_1.varBoxX+ModalMenu_1.varBoxWidth*.3
-        Y: =ModalMenu_1.Y+ModalMenu_1.varBoxHeight*.975
-        ZIndex: =12
-
-    "txtReportName As 'Text box'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =32
-        PCFTeamsTheme: =TeamsTheme.Default
-        Placeholder: ="Name"
-        Value: =""
-        Visible: =varModalMenuReport
-        Width: =txtCat1Title.Width
-        X: =txtCat1Title.X
-        Y: =ModalMenu_1.varLineLoc.LineY+8
-        ZIndex: =13
-
     contBody As groupContainer.manualLayoutContainer:
         Height: =Parent.Height-contBody.Y
         Width: =Parent.Width
@@ -588,6 +436,13 @@ Landing As screen:
                     ZIndex: =3
 
                     RecentHappenings_1 As RecentHappenings:
+                        colItems: =RecentHappenings_1.varItems
+                        GalDimensions: |-
+                            ={
+                                GalWidth: RecentHappenings_1.Width,
+                                GalY: Rectangle3.Y + Rectangle3.Height,
+                                GalHeight: RecentHappenings_1.Height - Rectangle3.Y
+                            }
                         Height: =RecentHappenings_1.varHeight
                         ItemsTitle: =
                         varHeight: =contEventsLog.Height

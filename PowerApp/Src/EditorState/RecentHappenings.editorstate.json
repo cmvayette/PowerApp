@@ -295,7 +295,7 @@
       "Type": "ControlInfo"
     },
     "RecentHappenings": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         {

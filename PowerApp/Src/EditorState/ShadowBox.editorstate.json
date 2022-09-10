@@ -822,7 +822,7 @@
       "Type": "ControlInfo"
     },
     "ShadowBox": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         "Height",

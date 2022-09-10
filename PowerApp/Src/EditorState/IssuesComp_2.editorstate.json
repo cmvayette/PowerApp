@@ -471,7 +471,7 @@
       "Type": "ControlInfo"
     },
     "IssuesComp_2": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         {

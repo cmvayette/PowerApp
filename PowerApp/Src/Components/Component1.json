@@ -2,7 +2,7 @@
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
   "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "Children": [],
     "ControlPropertyState": [
       "Fill",
@@ -21,7 +21,7 @@
       },
       "IssuesCats"
     ],
-    "LastModifiedTimestamp": "637984284694328147",
+    "LastModifiedTimestamp": "637984332551392594",
     "Name": "Component1",
     "Rules": [
       {
@@ -75,7 +75,7 @@
     ]
   },
   "ComponentManifest": {
-    "AllowAccessToGlobals": false,
+    "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
     "Name": "Component1",
@@ -111,7 +111,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984284694328147",
+  "LastModifiedTimestamp": "637984332551392594",
   "Name": "bc4a1ab30d2d41feab4fd706a8f642e1",
   "OverridableProperties": {},
   "Version": "637812482778534996"
