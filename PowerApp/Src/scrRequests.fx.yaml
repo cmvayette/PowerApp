@@ -525,7 +525,7 @@ scrRequests As screen:
                         Items: |-
                             =With(
                                 {
-                                    records: Filter(PlatformIssues, Name=Gallery7_1.Selected.Name)
+                                    records: Filter(colIssues, Title=Gallery7_1.Selected.Name)
                                 },
                                 ForAll(
                                     Sequence(CountRows(records)),
@@ -660,7 +660,7 @@ scrRequests As screen:
                             Height: =lblIssueStatus_4.Height
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_category
+                            Text: =varRecord.Category
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =valReportedBy_1.Width
                             X: =lblIssueStatus_4.X+lblIssueStatus_4.Width

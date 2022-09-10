@@ -312,7 +312,7 @@ scrIssueLog As screen:
                                         )
                             ))
                         Layout: =Layout.Vertical
-                        OnSelect: =Set(varRecord, ThisItem); Set(varDetVis, ThisItem.Name)
+                        OnSelect: =Set(varRecord, ThisItem); Set(varDetVis, ThisItem.Title)
                         ShowScrollbar: =false
                         TemplateFill: |-
                             =If(

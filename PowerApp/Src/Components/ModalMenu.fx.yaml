@@ -234,14 +234,14 @@ ModalMenu As CanvasComponent:
         Height: =32
         OnSelect: |
             =Patch(
-                PlatformIssues,
-                Defaults(PlatformIssues),
+                colIssues,
+                Defaults(colIssues),
                 {
                     Category: cmbIssueCat_2.Selected.Value,
-                    Name: txtIssueTitle_2.Value,
+                    Title: txtIssueTitle_2.Value,
                     Details: txtIssueDesc_2.Value,
-                    Reportedby: User().FullName,
-                    DateReported: Today(),
+                    ReportedBy: User().FullName,
+                    Date: Today(),
                     IssueStatus: "New"
                 }
             );

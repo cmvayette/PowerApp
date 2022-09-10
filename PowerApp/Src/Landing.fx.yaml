@@ -13,7 +13,7 @@ Landing As screen:
         );
         ClearCollect(
             colProjects,
-            {}
+            {Name: ""}
         );
         ClearCollect(
             colProjectItems,

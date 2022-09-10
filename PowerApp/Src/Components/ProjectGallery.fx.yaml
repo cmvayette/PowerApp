@@ -1,7 +1,7 @@
 ProjectGallery As CanvasComponent:
     compHeight: =200+0
     compTable: |-
-        =Table({projectTitle: Projects.Name, SampleNumberField: 10, SampleBooleanField: true})
+        =Table({projectTitle: colProjects.Name, SampleNumberField: 10, SampleBooleanField: true})
     compWidth: =1100
     Fill: =RGBA(0, 0, 0, 0)
     Height: =ProjectGallery.compHeight

@@ -2809,7 +2809,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Patch(\n    PlatformIssues,\n    Defaults(PlatformIssues),\n    {\n        Category: cmbIssueCat_2.Selected.Value,\n        Name: txtIssueTitle_2.Value,\n        Details: txtIssueDesc_2.Value,\n        Reportedby: User().FullName,\n        DateReported: Today(),\n        IssueStatus: \"New\"\n    }\n);\nSet(\n    varDemoFormAttachmentControl,\n    JSON(\n        UploadedImage1_2.Image,\n        JSONFormat.IncludeBinaryData\n    )\n);\nSet(\n    VarBase64Only,\n    Mid(\n        varDemoFormAttachmentControl,\n        Find(\n            \",\",\n            varDemoFormAttachmentControl\n        ) + 1,\n        Len(varDemoFormAttachmentControl) - Find(\n            \",\",\n            varDemoFormAttachmentControl\n        ) - 1\n    )\n);\nNotify(\"Issue Reported!\");\nSet(\n    varModalIssue,\n    false\n);\nAppImagetoSPO.Run(\n    txtIssueTitle_2.Value,\n    {\n        contentBytes: UploadedImage1_2.Image,\n        name: Text(\n            Now(),\n            \"yyMMddhhmmss\"\n        )\n    }\n);\n",
+            "InvariantScript": "Patch(\n    colIssues,\n    Defaults(colIssues),\n    {\n        Category: cmbIssueCat_2.Selected.Value,\n        Title: txtIssueTitle_2.Value,\n        Details: txtIssueDesc_2.Value,\n        ReportedBy: User().FullName,\n        Date: Today(),\n        IssueStatus: \"New\"\n    }\n);\nSet(\n    varDemoFormAttachmentControl,\n    JSON(\n        UploadedImage1_2.Image,\n        JSONFormat.IncludeBinaryData\n    )\n);\nSet(\n    VarBase64Only,\n    Mid(\n        varDemoFormAttachmentControl,\n        Find(\n            \",\",\n            varDemoFormAttachmentControl\n        ) + 1,\n        Len(varDemoFormAttachmentControl) - Find(\n            \",\",\n            varDemoFormAttachmentControl\n        ) - 1\n    )\n);\nNotify(\"Issue Reported!\");\nSet(\n    varModalIssue,\n    false\n);\nAppImagetoSPO.Run(\n    txtIssueTitle_2.Value,\n    {\n        contentBytes: UploadedImage1_2.Image,\n        name: Text(\n            Now(),\n            \"yyMMddhhmmss\"\n        )\n    }\n);\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -2912,7 +2912,7 @@
       },
       "varLineLoc"
     ],
-    "LastModifiedTimestamp": "637984284694333617",
+    "LastModifiedTimestamp": "637984355217204690",
     "Name": "ModalMenu",
     "Rules": [
       {
@@ -3092,7 +3092,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984284694333617",
+  "LastModifiedTimestamp": "637984355217204690",
   "Name": "6d64d02c77464d9c8727671011f82038",
   "OverridableProperties": {},
   "Version": "637819210184762390"
