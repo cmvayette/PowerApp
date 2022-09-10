@@ -8,7 +8,7 @@ Landing As screen:
             Now()
         ); Set(VarConnectors, 25);
         
-        ClearCollect(colProjects, Projects); ClearCollect(colProjectItems, 'Project Work Items'); Set(varCurrentScreen, "Status Report"); Set(varIconX, Icon2.X);Set(varLabelX, Label7.X);
+        ClearCollect(colProjects, {}); ClearCollect(colProjectItems, {}); Set(varCurrentScreen, "Status Report"); Set(varIconX, Icon2.X);Set(varLabelX, Label7.X);
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
