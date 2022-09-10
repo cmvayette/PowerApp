@@ -71,9 +71,11 @@ Landing As screen:
                 FeatureLink: ""
             }
         );
+        ClearCollect(colAppDocs, {Title: ""});
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
+        Lists: =PowerPlatformMenu_1.MenuList
         MenuList: |-
             =Table(
                 {
@@ -158,6 +160,7 @@ Landing As screen:
 
         PowerPlatformMenu_2 As PowerPlatformMenu:
             Height: =96
+            Lists: =PowerPlatformMenu_2.MenuList
             MenuList: |-
                 =Table(
                     {

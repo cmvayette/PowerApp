@@ -11,18 +11,8 @@
       "parameterHints": {},
       "parameterHintsV2": {}
     },
-    "datasets": {
-      "https://socom.sharepoint-mil.us/sites/nsw-km/": {
-        "dataSources": {
-          "AppDocs": {
-            "tableName": "5985e4b0-c077-4f20-ae28-f05d7029faa0"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "AppDocs"
-    ],
+    "datasets": {},
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
       "f19c6450-b233-4668-addd-16f2cbccdf1f"

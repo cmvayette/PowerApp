@@ -17,6 +17,7 @@ scrRequests As screen:
 
     PowerPlatformMenu_13 As PowerPlatformMenu:
         Height: =565.44
+        Lists: =PowerPlatformMenu_13.MenuList
         MenuList: |-
             =Table(
                 {
@@ -57,6 +58,7 @@ scrRequests As screen:
 
         PowerPlatformMenu_14 As PowerPlatformMenu:
             Height: =96
+            Lists: =PowerPlatformMenu_14.MenuList
             MenuList: |-
                 =Table(
                     {
@@ -482,7 +484,7 @@ scrRequests As screen:
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
                         Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
-                        Items: =LookUp(AppDocs, Title=varRecord.Name)
+                        Items: =LookUp(colAppDocs, Title=varRecord.Name)
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
                         TemplateSize: =Parent.Height*.5-contCard4TitleLabel_3.Height
