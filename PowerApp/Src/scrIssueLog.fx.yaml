@@ -2,7 +2,7 @@ scrIssueLog As screen:
     Fill: |
         =ColorValue("#F3F2F1") 
     LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
-    OnVisible: =Set(varIssueFilter, Gallery3.Selected.Title); Set(varModalIssue, false); Set(varDetVis, "Nope"); Set(varModalIssueEdit, false)
+    OnVisible: =Set(varIssueFilter, Gallery3.Selected.Title); Set(varModalIssue, false); Set(varSpecVis, "Nope"); Set(varModalIssueEdit, false)
 
     Component1_1 As Component1:
 
@@ -330,7 +330,7 @@ scrIssueLog As screen:
                             Height: =Parent.TemplateHeight*.8
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =ThisItem.Name
+                            Text: =ThisItem.Title
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth*.75
                             X: =
@@ -356,7 +356,7 @@ scrIssueLog As screen:
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             DisabledFill: =RGBA(200, 198, 196, 1)
-                            Fill: =If(varDetVis=ThisItem.Name, RGBA(98, 100, 167, 1), RGBA(0,0,0,0))
+                            Fill: =If(varSpecVis=ThisItem.Title, RGBA(98, 100, 167, 1), RGBA(0,0,0,0))
                             FocusedBorderColor: =RGBA(98, 100, 167, 1)
                             Height: =4
                             HoverFill: =RGBA(98, 100, 167, 1)
@@ -470,11 +470,11 @@ scrIssueLog As screen:
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
                         Height: =Parent.Height*.5-contCard4TitleLabel_1.Height
-                        Items: =LookUp(AppDocs, Title=varRecord.cr5f0_name)
+                        Items: =LookUp(AppDocs, Title=varRecord.Title)
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
                         TemplateSize: =Parent.Height*.5-contCard4TitleLabel_1.Height
-                        Visible: =If(varDetVis="Nope", false, true)
+                        Visible: =If(varSpecVis="Nope", false, true)
                         Width: =Parent.Width
                         X: =
                         Y: =galDetLeft.Y*.5-contCard4TitleLabel_1.Y*.5-galDetRight.Height*.5+contCard4TitleLabel_1.Height*.5
@@ -510,7 +510,7 @@ scrIssueLog As screen:
                         Items: |-
                             =With(
                                 {
-                                    records: Filter(PlatformIssues, Name=Gallery7.Selected.Name)
+                                    records: Filter(colIssues, Title=Gallery7.Selected.Title)
                                 },
                                 ForAll(
                                     Sequence(CountRows(records)),
@@ -524,7 +524,7 @@ scrIssueLog As screen:
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
                         TemplateSize: =Parent.Height*.4
-                        Visible: =If(varDetVis="Nope", false, true)
+                        Visible: =If(varSpecVis="Nope", false, true)
                         Width: =Parent.Width
                         X: =
                         Y: =Parent.Height*.5+contCard4TitleLabel_1.Height-16
@@ -567,7 +567,7 @@ scrIssueLog As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_reportedby
+                            Text: =varRecord.ReportedBy
                             Width: =lblReportedBy.Width*1.2
                             X: =lblReportedBy.X+lblReportedBy.Width
                             Y: =lblReportedBy.Y
@@ -594,7 +594,7 @@ scrIssueLog As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_datereported
+                            Text: =varRecord.Date
                             Width: =valReportedBy.Width
                             X: =lblIssueStatus.X+lblIssueStatus.Width
                             Y: =lblReportedBy.Y
@@ -618,7 +618,7 @@ scrIssueLog As screen:
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_details
+                            Text: =varRecord.IssueNotes
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth-lblIssueStatus_1.Width
                             X: =valReportedBy.X
@@ -646,7 +646,7 @@ scrIssueLog As screen:
                             Height: =lblIssueStatus_2.Height
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_assignedto
+                            Text: =varRecord.AssignedTo
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =valReportedBy.Width
                             X: =lblIssueStatus_2.X+lblIssueStatus_2.Width
@@ -671,7 +671,7 @@ scrIssueLog As screen:
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_issuenotes
+                            Text: =varRecord.IssueNotes
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =valIssueStatus_1.Width
                             X: =valReportedBy.X

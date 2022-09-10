@@ -39,7 +39,9 @@ Landing As screen:
                 Category: "",
                 IssueNotes: "",
                 Date: DateValue(02/22/2022),
-                ReportedBy: ""
+                ReportedBy: "",
+                IssueStatus: "",
+                AssignedTo: ""
             }
         );
         Set(
@@ -50,7 +52,7 @@ Landing As screen:
             varLabelX,
             Label7.X
         );
-        Set(varDetVis, "Nope")
+        Set(varSpecVis, "Nope")
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
