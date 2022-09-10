@@ -460,7 +460,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/10/2022 19:44:24",
+  "HeaderLastSavedDateTimeUTC": "09/10/2022 19:45:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "01e7060a-4fe9-420d-a04e-aa031c2e7124": "\"/providers/microsoft.powerapps/apis/shared_planner/connections/d4e64a9fba9644029b28f96c32ed8b85\"",
@@ -524,30 +524,18 @@
     "f44c76b42ae34cd795dffc52c450cf2b": 11
   },
   "OrderDataSource": {
-    "AppDocs": 15,
+    "AppDocs": 6,
     "AppImagetoSPO": 2,
-    "colArticles": 21,
-    "colIssues": 20,
-    "colPlatformFeatures": 19,
-    "colProjectItems": 22,
-    "colProjects": 23,
-    "CustomGallerySample": 13,
+    "colArticles": 9,
+    "colIssues": 8,
+    "colPlatformFeatures": 7,
+    "colProjectItems": 10,
+    "colProjects": 11,
+    "CustomGallerySample": 4,
     "GetConnectorCount": 0,
-    "ListboxSample": 14,
+    "ListboxSample": 5,
     "Office365Users": 3,
-    "Planner": 1,
-    "PlatformFeatures": 18,
-    "PlatformFeatures\\cr5f0_platformfeatures_statecode": 8,
-    "PlatformFeatures\\cr5f0_platformfeatures_statuscode": 9,
-    "PlatformFeatures\\default.cds_cr5f0_platformfeatures_views": 12,
-    "PPInitiativeTasks": 16,
-    "PPInitiativeTasks\\cr5f0_ppinitiatives_statecode": 4,
-    "PPInitiativeTasks\\cr5f0_ppinitiatives_statuscode": 5,
-    "PPInitiativeTasks\\default.cds_cr5f0_ppinitiatives_views": 10,
-    "PPObjectives": 17,
-    "PPObjectives\\cr5f0_ppobjectives_statecode": 6,
-    "PPObjectives\\cr5f0_ppobjectives_statuscode": 7,
-    "PPObjectives\\default.cds_cr5f0_ppobjectives_views": 11
+    "Planner": 1
   },
   "OrderGroupControls": {
     "ButtonGroup": {

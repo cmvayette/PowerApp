@@ -2533,7 +2533,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Patch(\n    PlatformFeatures,\n    Defaults(PlatformFeatures),\n    {\n        FeatureCategory: cmbIssueCat_3.Selected.Value,\n        Name: txtIssueTitle_3.Value,\n        FeatureDetails: txtIssueDesc_3.Value,\n        RequestedBy: User().FullName,\n        RequestedByEmail: User().Email,\n        DateofInformation: Today(),\n        FeatureStatus: \"Pending\",\n        FeatureLink: txtIssueTitle_4.Value\n    }\n);\n\nNotify(\"Feature Input Recieved!\"); Set(MenuVis, false)\n",
+            "InvariantScript": "Patch(\n    colPlatformFeatures,\n    Defaults(colPlatformFeatures),\n    {\n        FeatureCategory: cmbIssueCat_3.Selected.Value,\n        Name: txtIssueTitle_3.Value,\n        FeatureDetails: txtIssueDesc_3.Value,\n        RequestedBy: User().FullName,\n        RequestedByEmail: User().Email,\n        DateofInformation: Today(),\n        FeatureStatus: \"Pending\",\n        FeatureLink: txtIssueTitle_4.Value\n    }\n);\n\nNotify(\"Feature Input Recieved!\"); Set(MenuVis, false)\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -2637,7 +2637,7 @@
       "varLineLoc",
       "MenuVis"
     ],
-    "LastModifiedTimestamp": "637984284694342968",
+    "LastModifiedTimestamp": "637984359168859063",
     "Name": "ModalMenuFeature",
     "Rules": [
       {
@@ -2832,7 +2832,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984284694342968",
+  "LastModifiedTimestamp": "637984359168859063",
   "Name": "00ea96170c22466a834df17bd175506a",
   "OverridableProperties": {},
   "TemplateOriginalName": "6d64d02c77464d9c8727671011f82038",

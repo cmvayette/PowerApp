@@ -191,8 +191,8 @@ ModalMenuFeature As CanvasComponent:
         Height: =32
         OnSelect: |
             =Patch(
-                PlatformFeatures,
-                Defaults(PlatformFeatures),
+                colPlatformFeatures,
+                Defaults(colPlatformFeatures),
                 {
                     FeatureCategory: cmbIssueCat_3.Selected.Value,
                     Name: txtIssueTitle_3.Value,
