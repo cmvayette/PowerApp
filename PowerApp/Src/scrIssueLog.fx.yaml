@@ -299,8 +299,8 @@ scrIssueLog As screen:
                         Items: |-
                             =With(
                                 {
-                                    records: If(varIssueFilter= Gallery3.Selected.Title, Filter(PlatformIssues, Category=varIssueFilter)
-                                , Search(PlatformIssues, TextBox3.Value, "cr5f0_name", "cr5f0_category", "cr5f0_details", "cr5f0_issuenotes", "cr5f0_reportedby")
+                                    records: If(varIssueFilter= Gallery3.Selected.Title, Filter(colIssues, Category=varIssueFilter)
+                                , Search(colIssues, TextBox3.Value, "Title", "Category", "IssueNotes", "ReportedBy")
                              ) },
                                 ForAll(
                                     Sequence(CountRows(records)),

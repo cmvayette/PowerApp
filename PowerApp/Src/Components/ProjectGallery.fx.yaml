@@ -236,7 +236,7 @@ ProjectGallery As CanvasComponent:
             FontWeight: =FontWeight.Semibold
             Height: =32
             PCFTeamsTheme: =TeamsTheme.Default
-            Text: ="Assigned to"
+            Text: ="Lead Contact"
             Width: =Parent.Width/8
             X: =RectSecond.X+16
             Y: =

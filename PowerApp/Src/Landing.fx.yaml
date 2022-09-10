@@ -2,13 +2,55 @@ Landing As screen:
     Fill: |
         =ColorValue("#F3F2F1") 
     LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(
             varNow,
             Now()
-        ); Set(VarConnectors, 25);
-        
-        ClearCollect(colProjects, {}); ClearCollect(colProjectItems, {}); ClearCollect(colArticles, { Name: "This Thing", DateSubmitted: "2/2/2022", AuthorName: "Corey Vayette", FirstParagraph: "This thing is a thing, it doesn't do lots, just things." }); Set(varCurrentScreen, "Status Report"); Set(varIconX, Icon2.X);Set(varLabelX, Label7.X);
+        );
+        Set(
+            VarConnectors,
+            25
+        );
+        ClearCollect(
+            colProjects,
+            {}
+        );
+        ClearCollect(
+            colProjectItems,
+            {}
+        );
+        ClearCollect(
+            colArticles,
+            {
+                Name: "This Thing",
+                DateSubmitted: "2/2/2022",
+                AuthorName: "Corey Vayette",
+                FirstParagraph: "This thing is a thing, it doesn't do lots, just things."
+            }
+        );
+        Set(
+            varCurrentScreen,
+            "Status Report"
+        );
+        ClearCollect(
+            colIssues,
+            {
+                Title: "",
+                Category: "",
+                IssueNotes: "",
+                Date: DateValue(02/22/2022),
+                ReportedBy: ""
+            }
+        );
+        Set(
+            varIconX,
+            Icon2.X
+        );
+        Set(
+            varLabelX,
+            Label7.X
+        );
+        Set(varDetVis, "Nope")
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
@@ -553,7 +595,7 @@ Landing As screen:
                                 {
                                     records: colArticles },
                                 ForAll(
-                                    Sequence(CountRows(records)),
+                                    Sequence(CountRows(colArticles)),
                                     Patch(
                                         Last(
                                             FirstN(records,Value)),
