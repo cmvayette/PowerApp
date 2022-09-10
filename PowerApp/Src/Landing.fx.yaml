@@ -75,7 +75,6 @@ Landing As screen:
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44
-        Lists: =PowerPlatformMenu_1.MenuList
         MenuList: |-
             =Table(
                 {
@@ -160,7 +159,6 @@ Landing As screen:
 
         PowerPlatformMenu_2 As PowerPlatformMenu:
             Height: =96
-            Lists: =PowerPlatformMenu_2.MenuList
             MenuList: |-
                 =Table(
                     {
@@ -171,22 +169,22 @@ Landing As screen:
                     {
                         Title: "Issue Log",
                         Icon: Bug,
-                        Screen: scrIssueLog
+                        Screen: 'Issue Log Screen'
                     },
                     {
                         Title: "Roadmap",
                         Icon: LevelsLayersItems,
-                        Screen: scrRoadmap
+                        Screen: 'Roadmap Screen'
                     },
                     {
                         Title: "Knowledge Base",
                         Icon: Notebook,
-                        Screen: scrKnowledgeBase
+                        Screen: 'Knowedge Base Screen'
                     },
                     {
                         Title: "Requests",
                         Icon: Items,
-                        Screen: scrRequests
+                        Screen: 'Requests Screen'
                     }
                 )
             Width: =227.66666666666663

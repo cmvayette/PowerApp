@@ -1,0 +1,6 @@
+"'Requests Screen' As screen":
+    Fill: |
+        =ColorValue("#F3F2F1") 
+    LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
+    OnVisible: =Set(varIssueFilter, Gallery3_1.Selected.Title); Set(varModalFeature, false); Set(varDetVis, "Nope"); Set(varModalIssueEdit, false); 
+
