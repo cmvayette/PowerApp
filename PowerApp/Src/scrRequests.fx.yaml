@@ -1,0 +1,691 @@
+scrRequests As screen:
+    Fill: |
+        =ColorValue("#F3F2F1") 
+    LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
+    OnVisible: =Set(varIssueFilter, Gallery3_1.Selected.Title); Set(varModalFeature, false); Set(varDetVis, "Nope"); Set(varModalIssueEdit, false); 
+
+    Component1_2 As Component1:
+        IssueFilters: |-
+            =Table(
+                
+                {Title: "Pending Connectors"},
+                {Title: "Pending Features"},
+                {Title: "Request Connectors"},
+                {Title: "Request Features"},
+                {Title: "Request Application"}
+            )
+
+    PowerPlatformMenu_13 As PowerPlatformMenu:
+        Height: =565.44
+        MenuList: |-
+            =Table(
+                {
+                    Title: "Status Report",
+                    Icon: Health,
+                    Screen: Landing
+                },
+                {
+                    Title: "Issue Log",
+                    Icon: Bug,
+                    Screen: scrRequests
+                },
+                {
+                    Title: "Roadmap",
+                    Icon: LevelsLayersItems,
+                    Screen: scrRoadmap
+                },
+                {
+                    Title: "Knowledge Base",
+                    Icon: Notebook,
+                    Screen: scrKnowledgeBase
+                },
+                {
+                    Title: "Requests",
+                    Icon: Items,
+                    Screen: scrRequests
+                }
+            )
+        Width: =227.66666666666663
+        ZIndex: =2
+
+    contHeader_6 As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height/8
+        Width: =Parent.Width
+        X: =0+0
+        Y: =0+0
+        ZIndex: =4
+
+        PowerPlatformMenu_14 As PowerPlatformMenu:
+            Height: =96
+            MenuList: |-
+                =Table(
+                    {
+                        Title: "Status Report",
+                        Icon: Health,
+                        Screen: Landing
+                    },
+                    {
+                        Title: "Issue Log",
+                        Icon: Bug,
+                        Screen: scrRequests
+                    },
+                    {
+                        Title: "Roadmap",
+                        Icon: LevelsLayersItems,
+                        Screen: scrRoadmap
+                    },
+                    {
+                        Title: "Knowledge Base",
+                        Icon: Notebook,
+                        Screen: scrKnowledgeBase
+                    },
+                    {
+                        Title: "Features",
+                        Icon: Items,
+                        Screen: scrRequests
+                    }
+                )
+            Width: =227.66666666666663
+
+        ShadowBox_7 As ShadowBox:
+            Height: =96
+            ShadowBoxWidth: =Parent.Width
+            Width: =Parent.Width
+            ZIndex: =2
+
+        Gallery4_5 As gallery.BrowseLayout_Horizontal_TwoTextOneImageVariant_pcfCore:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            FocusedBorderThickness: =2
+            Height: =Parent.Height-16
+            Items: =PowerPlatformMenu_14.Lists
+            OnSelect: =Set(varCurrentScreen, ThisItem.Title);Navigate(ThisItem.Screen)
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =Parent.Width/12
+            Width: =Parent.Width/2
+            X: =8+0
+            Y: =5+0
+            ZIndex: =4
+
+            Label7_5 As Label:
+                Alignment: =Align.Center
+                Color: =If(varCurrentScreen = ThisItem.Title, RGBA(255, 255, 255, 1), RGBA(161, 162, 202, 1))
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                OnSelect: =Set(varCurrentScreen, ThisItem.Title);Navigate(ThisItem.Screen)
+                PCFTeamsTheme: =TeamsTheme.Default
+                Text: =ThisItem.Title
+                Width: =110
+                X: =3.8333333333333286
+                Y: =40
+                ZIndex: =1
+
+            Icon2_5 As icon.Add:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =If(varCurrentScreen = ThisItem.Title, RGBA(255, 255, 255, 1), RGBA(161, 162, 202, 1))
+                DisabledBorderColor: =RGBA(243, 242, 241, 1)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Height: =32
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =ThisItem.Icon
+                OnSelect: =Set(varCurrentScreen, ThisItem.Title);Navigate(ThisItem.Screen)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =32
+                X: =varIconX
+                Y: =8
+                ZIndex: =2
+
+    contCat_6 As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height/15
+        Width: =Parent.Width
+        X: =0+0
+        Y: =contHeader_6.Height*.95+contHeader_6.Y
+        ZIndex: =7
+
+        Gallery3_1 As gallery.galleryHorizontal:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            Default: =First(Gallery3_1.AllItems.Title)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            FocusedBorderThickness: =2
+            Height: =51.2
+            Items: =Component1_2.IssuesCats
+            OnSelect: =Set(varIssueFilter, ThisItem.Title)
+            ShowScrollbar: =false
+            TemplateSize: =Parent.Width/7
+            Width: =Parent.Width*.8
+            X: =Parent.Width*.1
+            ZIndex: =1
+
+            Label10_1 As Label:
+                Alignment: =Align.Center
+                Color: =If(ThisItem.IsSelected, RGBA(70,71,117,1),RGBA(0,0,0,1))
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =If(varIssueFilter = ThisItem.Title, "bold", "normal")
+                Height: =32
+                OnSelect: =Set(varIssueFilter, ThisItem.Title)
+                PCFTeamsTheme: =TeamsTheme.Default
+                Text: =ThisItem.Title
+                Width: =160
+                X: =0
+                Y: =
+                ZIndex: =1
+
+    ModalMenuFeature_1 As ModalMenuFeature:
+        Height: =ModalMenuFeature_1.varHeight
+        Visible: =MenuVis
+        Width: =ModalMenuFeature_1.varWidth
+        ZIndex: =9
+
+    grpBody_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        contBody_7 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-contBody_7.Y
+            Width: =Parent.Width*.33
+            X: =Parent.Width*.025
+            Y: =contHeader_6.Y+contHeader_6.Height*1.33
+            ZIndex: =3
+
+            contContent_7 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                Width: =Parent.Width
+                Y: =
+                ZIndex: =2
+
+                ShadowBoxCard_12 As ShadowBoxCard:
+                    Height: =Parent.Height
+                    ShadowBoxHeight: =ShadowBoxCard_12.Height
+                    ShadowBoxWidth: =Parent.Width
+                    Visible: =true
+                    Width: =Parent.Width*.965
+                    X: =4
+
+                contCard4_5 As groupContainer.manualLayoutContainer:
+                    Height: =Parent.Height*.9
+                    Width: =contContent_7.Width*.975
+                    X: =
+                    Y: =
+                    ZIndex: =5
+
+                    contCard4TitleLabel_2 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(70,71,117,1)
+                        Height: =40
+                        Width: =Parent.Width-6
+                        X: =5
+                        Y: =0+0
+                        ZIndex: =1
+
+                        Label4_3 As Label:
+                            Alignment: =Align.Left
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: ="Title"
+                            Width: =Parent.Width*.25
+                            X: =8
+                            Y: =Parent.Height*.5-Label4_3.Height*.5
+                            ZIndex: =1
+
+                        "TextBox3_1 As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Placeholder: ="Search"
+                            Value: =""
+                            Visible: =If(varSearchView, true, false)
+                            Width: =Parent.Width*.55
+                            X: =Parent.Width-Self.Width-4
+                            Y: =Label4_3.Y
+                            ZIndex: =5
+
+                        Icon8_2 As icon.Add:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =If(Icon8_3.Visible,RGBA(69,70,117,1),RGBA(255, 255, 255, 1))
+                            DisabledBorderColor: =RGBA(243, 242, 241, 1)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(255, 255, 255, 1), 30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Search
+                            OnSelect: =If(TextBox3_1.Visible, Set(varIssueFilter, TextBox3_1.Value), (Set(varSearchView, true)))
+                            PaddingBottom: =5
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =30
+                            X: =If(Icon8_3.Visible, TextBox3_1.X+TextBox3_1.Width-Icon8_2.Width-Icon8_3.Width*1.1, TextBox3_1.X+TextBox3_1.Width-Icon8_2.Width)
+                            Y: =TextBox3_1.Y
+                            ZIndex: =6
+
+                        Icon8_3 As icon.Add:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(98, 100, 167, 1)
+                            DisabledBorderColor: =RGBA(243, 242, 241, 1)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Cancel
+                            OnSelect: =Set(varSearchView, false); Set(varIssueFilter, "Power Apps")
+                            PaddingBottom: =5
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Visible: =If(varSearchView, true, false)
+                            Width: =30
+                            X: =TextBox3_1.X+TextBox3_1.Width-Icon8_3.Width
+                            Y: =TextBox3_1.Y
+                            ZIndex: =7
+
+                    Gallery7_1 As gallery.galleryVertical:
+                        BorderColor: =RGBA(243, 242, 241, 1)
+                        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                        FocusedBorderThickness: =2
+                        Height: =Parent.Height-contCard4TitleLabel_2.Height
+                        Items: |-
+                            =With(
+                                {
+                                    records: Filter(PlatformFeatures, FeatureCategory=varIssueFilter)
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(records,Value)),
+                                            {rowNumber: Value}
+                                        )
+                            ))
+                        Layout: =Layout.Vertical
+                        OnSelect: =Set(varRecord, ThisItem); Set(varDetVis, ThisItem.Name)
+                        ShowScrollbar: =false
+                        TemplateFill: |-
+                            =If(
+                                Mod(ThisItem.rowNumber,2) = 0,
+                                RGBA(224,224,237,1),
+                                Transparent
+                            )
+                        TemplateSize: =Parent.Height/11
+                        Width: =Parent.Width-4
+                        X: =4
+                        Y: =contCard4TitleLabel_2.Height
+                        ZIndex: =2
+
+                        lblIssueSIngleTitle_2 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =If(ThisItem.IsSelected, "semibold", "normal")
+                            Height: =Parent.TemplateHeight*.8
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =ThisItem.Name
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth*.75
+                            X: =
+                            Y: =
+                            ZIndex: =1
+
+                        lblIssueSIngleTitle_3 As Label:
+                            Alignment: =Align.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Normal
+                            Height: =Parent.TemplateHeight*.8
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =ThisItem.DateofInformation
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth*.25
+                            X: =lblIssueSIngleTitle_2.Width
+                            Y: =
+                            ZIndex: =2
+
+                        Rectangle5_1 As rectangle:
+                            BorderColor: =RGBA(243, 242, 241, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledFill: =RGBA(200, 198, 196, 1)
+                            Fill: =RGBA(98, 100, 167, 1)
+                            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                            Height: =4
+                            HoverFill: =RGBA(98, 100, 167, 1)
+                            OnSelect: =Select(Parent)
+                            PressedFill: =RGBA(98, 100, 167, 1)
+                            Width: =Parent.TemplateWidth*.95
+                            X: =Parent.TemplateWidth*.025
+                            Y: =Parent.TemplateHeight-Rectangle5_1.Height
+                            ZIndex: =3
+
+        contBody_8 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-contBody_8.Y
+            Width: =Parent.Width*.6
+            X: =contBody_7.X+contBody_7.Width
+            Y: =contHeader_6.Y+contHeader_6.Height*1.33
+            ZIndex: =8
+
+            contContent_8 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                Width: =Parent.Width
+                Y: =
+                ZIndex: =2
+
+                ShadowBoxCard_16 As ShadowBoxCard:
+                    Height: =Parent.Height
+                    ShadowBoxHeight: =ShadowBoxCard_16.Height
+                    ShadowBoxWidth: =Parent.Width
+                    Visible: =true
+                    Width: =Parent.Width
+
+                contCard4_6 As groupContainer.manualLayoutContainer:
+                    Height: =Parent.Height+0
+                    Width: =contContent_8.Width*.975
+                    X: =5+0
+                    ZIndex: =5
+
+                    contCard4TitleLabel_3 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(70,71,117,1)
+                        Height: =40
+                        Width: =Parent.Width
+                        X: =
+                        Y: =0+0
+                        ZIndex: =1
+
+                        Label4_4 As Label:
+                            Alignment: =Align.Left
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: ="Details"
+                            Width: =320
+                            X: =8
+                            Y: =Parent.Height*.5-Label4_4.Height*.5
+                            ZIndex: =1
+
+                        Icon6_1 As icon.Add:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(243, 242, 241, 1)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =32
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Edit
+                            OnSelect: =Set(varModalIssueEdit, true)
+                            PaddingBottom: =3
+                            PaddingLeft: =3
+                            PaddingRight: =3
+                            PaddingTop: =3
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Visible: =If(User().FullName="Corey Vayette" || User().FullName, true, false)
+                            Width: =32
+                            X: =Parent.Width-Self.Width*1.2
+                            Y: =Parent.Height*.5-Self.Height*.5
+                            ZIndex: =2
+
+                        Icon4_1 As icon.Add:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(243, 242, 241, 1)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =32
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Add
+                            OnSelect: =Set(MenuVis, true)
+                            PaddingBottom: =3
+                            PaddingLeft: =3
+                            PaddingRight: =3
+                            PaddingTop: =3
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =32
+                            X: =If(Icon6_1.Visible=true, Icon6_1.X-Self.Width, Parent.Width-Self.Width*1.2)
+                            Y: =Parent.Height*.5-Self.Height*.5
+                            ZIndex: =3
+
+                    galDetRight_1 As gallery.galleryVertical:
+                        BorderColor: =RGBA(243, 242, 241, 1)
+                        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                        FocusedBorderThickness: =2
+                        Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
+                        Items: =LookUp(AppDocs, Title=varRecord.cr5f0_name)
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplateSize: =Parent.Height*.5-contCard4TitleLabel_3.Height
+                        Visible: =If(varDetVis="Nope", false, true)
+                        Width: =Parent.Width
+                        X: =
+                        Y: =galDetLeft_1.Y*.5-contCard4TitleLabel_3.Y*.5-galDetRight_1.Height*.5+contCard4TitleLabel_3.Height*.5
+                        ZIndex: =2
+
+                        Image6_1 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.TemplateHeight
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =ThisItem.Thumbnail.Large
+                            OnSelect: =Launch(ThisItem.'Link to item')
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            RadiusBottomLeft: =3
+                            RadiusBottomRight: =3
+                            RadiusTopLeft: =3
+                            RadiusTopRight: =3
+                            Width: =Parent.TemplateWidth
+                            X: =
+                            Y: =
+                            ZIndex: =1
+
+                    galDetLeft_1 As gallery.galleryVertical:
+                        BorderColor: =RGBA(243, 242, 241, 1)
+                        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                        FocusedBorderThickness: =2
+                        Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
+                        Items: |-
+                            =With(
+                                {
+                                    records: Filter(PlatformIssues, Name=Gallery7_1.Selected.Name)
+                                },
+                                ForAll(
+                                    Sequence(CountRows(records)),
+                                    Patch(
+                                        Last(
+                                            FirstN(records,Value)),
+                                            {rowNumber: Value}
+                                        )
+                                    )
+                            )
+                        Layout: =Layout.Vertical
+                        ShowScrollbar: =false
+                        TemplateSize: =Parent.Height*.4
+                        Visible: =If(varDetVis="Nope", false, true)
+                        Width: =Parent.Width
+                        X: =
+                        Y: =Parent.Height*.5+contCard4TitleLabel_3.Height-16
+                        ZIndex: =3
+
+                        Rectangle6_1 As rectangle:
+                            BorderColor: =RGBA(243, 242, 241, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledFill: =RGBA(200, 198, 196, 1)
+                            Fill: =RGBA(70, 71, 117, 1)
+                            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+                            Height: =lblReportedBy_1.Height*1.33
+                            HoverFill: =RGBA(70, 71, 117, 1)
+                            OnSelect: =Select(Parent)
+                            PressedFill: =RGBA(98, 100, 167, 1)
+                            Width: =789.11
+                            X: =0+0
+                            Y: =0+0
+                            ZIndex: =1
+
+                        lblReportedBy_1 As Label:
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: |-
+                                ="Reported By:"
+                            Width: =Parent.TemplateWidth*.125
+                            X: =8
+                            Y: =8
+                            ZIndex: =2
+
+                        valReportedBy_1 As Label:
+                            Alignment: =Align.Left
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =varRecord.cr5f0_requestedby
+                            Width: =lblReportedBy_1.Width*1.2
+                            X: =lblReportedBy_1.X+lblReportedBy_1.Width
+                            Y: =lblReportedBy_1.Y
+                            ZIndex: =3
+
+                        lblIssueStatus_5 As Label:
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: |-
+                                ="Date Reported:"
+                            Width: =lblReportedBy_1.Width
+                            X: =Parent.TemplateWidth-lblIssueStatus_5.Width-valIssueStatus_5.Width*1.1
+                            Y: =lblReportedBy_1.Y
+                            ZIndex: =4
+
+                        valIssueStatus_5 As Label:
+                            Alignment: =Align.Center
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =varRecord.cr5f0_dateofinformation
+                            Width: =valReportedBy_1.Width
+                            X: =lblIssueStatus_5.X+lblIssueStatus_5.Width
+                            Y: =lblReportedBy_1.Y
+                            ZIndex: =5
+
+                        lblIssueStatus_6 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: |-
+                                ="Details:"
+                            Width: =Parent.TemplateWidth*.25
+                            X: =8
+                            Y: =lblIssueStatus_5.Y+lblReportedBy_1.Height*1.5
+                            ZIndex: =6
+
+                        valIssueStatus_6 As Label:
+                            Alignment: =Align.Left
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.TemplateHeight*.25
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =varRecord.cr5f0_featuredetails
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth-lblIssueStatus_6.Width
+                            X: =valReportedBy_1.X
+                            Y: =lblIssueStatus_5.Y+lblReportedBy_1.Height*1.5
+                            ZIndex: =7
+
+                        lblIssueStatus_4 As Label:
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Normal
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: |-
+                                ="Assigned:"
+                            Width: =lblReportedBy_1.Width
+                            X: =valReportedBy_1.X+valReportedBy_1.Width*1.5
+                            Y: =lblReportedBy_1.Y
+                            ZIndex: =8
+
+                        valIssueStatus_4 As Label:
+                            Alignment: =Align.Left
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =lblIssueStatus_4.Height
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =varRecord.cr5f0_category
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =valReportedBy_1.Width
+                            X: =lblIssueStatus_4.X+lblIssueStatus_4.Width
+                            Y: =lblReportedBy_1.Y
+                            ZIndex: =9
+
+                        lblIssueStatus_7 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: |-
+                                ="Notes:"
+                            Width: =Parent.TemplateWidth*.25
+                            X: =8.555000000000007
+                            Y: =valIssueStatus_6.Y+valIssueStatus_6.Height+8
+                            ZIndex: =10
+
+                        valIssueStatus_7 As Label:
+                            Alignment: =Align.Left
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.TemplateHeight*.25
+                            OnSelect: =Select(Parent)
+                            PCFTeamsTheme: =TeamsTheme.Default
+                            Text: =varRecord.cr5f0_featuredetails
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =valIssueStatus_6.Width
+                            X: =valReportedBy_1.X
+                            Y: =lblIssueStatus_7.Y
+                            ZIndex: =11
+

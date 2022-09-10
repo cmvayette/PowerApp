@@ -1,0 +1,239 @@
+ModalMenuFeature As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =ModalMenuFeature.varHeight
+    MenuVis: =true
+    varBoxHeight: =rectMenu_1.Height
+    varBoxWidth: =rectMenu_1.Width
+    varBoxX: =rectMenu_1.X
+    varBoxY: =rectMenu_1.Y
+    varHeight: =Max(App.Height, App.MinScreenHeight)
+    varLineLoc: |-
+        ={LineX: rectBreakBreak_1.X, LineY: rectBreakBreak_1.Y, LineWidth: rectBreakBreak_1.Width}
+    varTitle: =
+    varWidth: =Max(App.Width, App.MinScreenWidth)
+    Width: =ModalMenuFeature.varWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    rectBackground_1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(0, 0, 0, .6)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =Parent.Height
+        HoverFill: =RGBA(0, 0, 0, 0.6)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =Parent.Width
+        X: =0+0
+        Y: =0+0
+        ZIndex: =1
+
+    rectMenu_1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =Parent.Height*.85
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Visible: =false
+        Width: =Parent.Width*.5
+        X: =Parent.Width*.5-rectMenu_1.Width*.5
+        Y: =Parent.Height*.125
+        ZIndex: =2
+
+    HtmlText2_1 As htmlViewer:
+        Height: =rectMenu_1.Height
+        HtmlText: |-
+            ="<div style='background-color: #FFFFFF; width: "& rectMenu_1.Width*.975 &"px;height: "& rectMenu_1.Height*.9 &"px; box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);'></div>"
+        Width: =rectMenu_1.Width
+        X: =rectMenu_1.X
+        Y: =rectMenu_1.Y
+        ZIndex: =3
+
+    lblMenuTitle_1 As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =ModalMenuFeature.varTitle
+        VerticalAlignment: =VerticalAlign.Top
+        Width: =320
+        X: =rectBreakBreak_1.X+rectBreakBreak_1.Width*.5-lblMenuTitle_1.Width*.5
+        Y: =rectMenu_1.Y+rectBreakBreak_1.Y*.5-lblMenuTitle_1.Height*1.3
+        ZIndex: =4
+
+    rectBreakBreak_1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(49, 50, 83, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =5
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =rectMenu_1.Width*.8
+        X: =rectMenu_1.X+rectMenu_1.Width*.1
+        Y: =rectMenu_1.Y+rectMenu_1.Height*.1125
+        ZIndex: =5
+
+    Icon5_3 As icon.Add:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(98, 100, 167, 1)
+        DisabledBorderColor: =RGBA(243, 242, 241, 1)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =32
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(MenuVis, false)
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =32
+        X: =rectMenu_1.X+rectMenu_1.Width-Self.Width*1.5
+        Y: =rectMenu_1.Y+Self.Height*.25
+        ZIndex: =6
+
+    "cmbIssueCat_3 As 'Combo box'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: =["Pending Connectors", "Pending Features", "Request Connectors", "Request Features", "Request Application"]
+        PCFTeamsTheme: =TeamsTheme.Default
+        Visible: =true
+        Width: =ModalMenuFeature.varLineLoc.LineWidth-lblIssueCat_3.Width
+        X: =lblIssueCat_3.X+lblIssueCat_3.Width
+        Y: =lblIssueCat_3.Y
+        ZIndex: =7
+
+        Value1_3 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =6
+
+    lblIssueCat_3 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Category"
+        Visible: =true
+        Width: =ModalMenuFeature.varLineLoc.LineWidth*.2
+        X: =ModalMenuFeature.varLineLoc.LineX
+        Y: =ModalMenuFeature.varLineLoc.LineY+16
+        ZIndex: =8
+
+    lblIssueTitle_3 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Title"
+        Visible: =true
+        Width: =ModalMenuFeature.varLineLoc.LineWidth*.2
+        X: =ModalMenuFeature.varLineLoc.LineX
+        Y: =lblIssueCat_3.Y+lblIssueCat_3.Height*2
+        ZIndex: =9
+
+    "txtIssueTitle_3 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Name of Feature"
+        Value: =""
+        Visible: =true
+        Width: =cmbIssueCat_3.Width
+        X: =cmbIssueCat_3.X
+        Y: =lblIssueTitle_3.Y
+        ZIndex: =10
+
+    lblIssueDesc_3 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Description"
+        Visible: =true
+        Width: =ModalMenuFeature.varLineLoc.LineWidth*.2
+        X: =ModalMenuFeature.varLineLoc.LineX
+        Y: =lblIssueTitle_4.Y+lblIssueCat_3.Height*2
+        ZIndex: =11
+
+    "txtIssueDesc_3 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =96
+        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Short Title of Issue, please include as many details as possible to help reproduce."
+        Value: =""
+        Visible: =true
+        Width: =cmbIssueCat_3.Width
+        X: =cmbIssueCat_3.X
+        Y: =lblIssueDesc_3.Y
+        ZIndex: =12
+
+    Button5_3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Lighter
+        Height: =32
+        OnSelect: |
+            =Patch(
+                PlatformFeatures,
+                Defaults(PlatformFeatures),
+                {
+                    FeatureCategory: cmbIssueCat_3.Selected.Value,
+                    Name: txtIssueTitle_3.Value,
+                    FeatureDetails: txtIssueDesc_3.Value,
+                    RequestedBy: User().FullName,
+                    RequestedByEmail: User().Email,
+                    DateofInformation: Today(),
+                    FeatureStatus: "Pending",
+                    FeatureLink: txtIssueTitle_4.Value
+                }
+            );
+            
+            Notify("Feature Input Recieved!"); Set(MenuVis, false)
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Submit"
+        Visible: =true
+        Width: =96
+        X: =rectMenu_1.X+rectMenu_1.Width-Self.Width*1.2
+        Y: =ModalMenuFeature.varBoxHeight-Self.Height*.1
+        ZIndex: =15
+
+    lblIssueTitle_4 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Link"
+        Visible: =true
+        Width: =ModalMenuFeature.varLineLoc.LineWidth*.2
+        X: =ModalMenuFeature.varLineLoc.LineX
+        Y: =lblIssueTitle_3.Y+lblIssueCat_3.Height*2
+        ZIndex: =16
+
+    "txtIssueTitle_4 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="URL to Feature/Connector Requested"
+        Value: =""
+        Visible: =true
+        Width: =cmbIssueCat_3.Width
+        X: =cmbIssueCat_3.X
+        Y: =lblIssueTitle_4.Y
+        ZIndex: =17
+

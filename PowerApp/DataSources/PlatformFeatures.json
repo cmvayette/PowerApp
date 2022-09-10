@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr5f0_platformfeatureses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr5f0_platformfeatures",
+    "MaxGetRowsCount": 500,
+    "Name": "PlatformFeatures",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr5f0_dateofinformation": "DateofInformation",
+      "cr5f0_featurecategory": "FeatureCategory",
+      "cr5f0_featuredetails": "FeatureDetails",
+      "cr5f0_featurelink": "FeatureLink",
+      "cr5f0_featurestatus": "FeatureStatus",
+      "cr5f0_name": "Name",
+      "cr5f0_platformfeatures_AsyncOperations": "System Jobs",
+      "cr5f0_platformfeatures_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr5f0_platformfeatures_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr5f0_platformfeatures_ProcessSession": "Process Sessions",
+      "cr5f0_platformfeaturesid": "PlatformFeatures",
+      "cr5f0_requestedby": "RequestedBy",
+      "cr5f0_requestedbyemail": "RequestedByEmail",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PlatformFeatures",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PlatformFeatures (Views)",
+    "Name": "_cr5f0_platformfeatures_views",
+    "RelatedEntityName": "PlatformFeatures",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "34db31d8-1113-4c62-86d5-f8e1a795ab81": "PlatformFeatures Advanced Find View",
+      "38f9f454-9d2e-4b1c-9c8d-2e9001656c03": "PlatformFeatures Associated View",
+      "67a62a33-5db0-4c5a-8eab-2b918eaf3dd0": "Active PlatformFeatures",
+      "c78edfd5-fb69-4f86-bb42-6fad6a4cb650": "Inactive PlatformFeatures",
+      "d0eb9a6a-c902-4e34-942e-8c5221f7b3e0": "PlatformFeatures Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (PlatformFeatures)",
+    "Name": "cr5f0_platformfeatures_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PlatformFeatures"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PlatformFeatures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PlatformFeatures)",
+    "Name": "cr5f0_platformfeatures_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PlatformFeatures"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PlatformFeatures",
+    "Type": "OptionSetInfo"
+  }
+]

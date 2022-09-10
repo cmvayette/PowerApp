@@ -1,0 +1,59 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_msft_project_forms",
+      "Namespace": "Projects (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_msft_projectworkitem_forms",
+      "Namespace": "Project Work Items (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_msft_projectworkitemcategory_forms",
+      "Namespace": "Project Work Item Categories (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_msft_projectmilestone_forms",
+      "Namespace": "Project Milestones (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_cr5f0_platformhappenings_forms",
+      "Namespace": "PlatformHappenings (Forms)",
+      "Values": {
+        "Information": "03e5c1f7-94e9-4f3a-966e-db7341986c2a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr5f0_platformissues_forms",
+      "Namespace": "PlatformIssues (Forms)",
+      "Values": {
+        "Information": "b1f4ab56-0b33-4619-852b-ea4b0b22b2a0"
+      }
+    },
+    {
+      "Kind": "default.cds_cr5f0_ppinitiatives_forms",
+      "Namespace": "PPInitiativeTasks (Forms)",
+      "Values": {
+        "Information": "a7584fac-f78c-4710-9956-6e14ba25368b"
+      }
+    },
+    {
+      "Kind": "default.cds_cr5f0_ppobjectives_forms",
+      "Namespace": "PPObjectives (Forms)",
+      "Values": {
+        "Information": "e78b8add-8ef8-495b-9480-d7f5cb1ee2ff"
+      }
+    },
+    {
+      "Kind": "default.cds_cr5f0_platformfeatures_forms",
+      "Namespace": "PlatformFeatures (Forms)",
+      "Values": {
+        "Information": "785be829-2e80-45f4-a91c-9c22b933d88d"
+      }
+    }
+  ]
+}

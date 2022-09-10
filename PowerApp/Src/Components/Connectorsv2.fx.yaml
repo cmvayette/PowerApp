@@ -1,0 +1,104 @@
+Connectorsv2 As CanvasComponent:
+    CompHeight: =140+0
+    CompWidth: =470
+    ConnectorCount: =VarConnectors
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Connectorsv2.CompHeight
+    ParityPercentage: =Connectorsv2.ConnectorCount/Connectorsv2.TotalConnector
+    TotalConnector: =218
+    Width: =Connectorsv2.CompWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    valConnectorCount As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =16
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Connectorsv2.ConnectorCount
+        Width: =Parent.Width/5
+        X: =8
+        Y: =Parent.Height*.15
+        ZIndex: =1
+
+    valConnectorTotal As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =16
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Connectorsv2.TotalConnector
+        Width: =Parent.Width/5
+        X: =8
+        Y: =Rectangle1.Y+8
+        ZIndex: =2
+
+    lblConnectorCount As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="DoD Connectors"
+        Width: =Parent.Width/2
+        X: =valConnectorCount.X+valConnectorCount.Width
+        Y: =valConnectorCount.Y
+        ZIndex: =3
+
+    lblConnectorTotal As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Microsoft Connectors"
+        Width: =Parent.Width/2
+        X: =valConnectorTotal.X+valConnectorTotal.Width
+        Y: =valConnectorTotal.Y
+        ZIndex: =4
+
+    valParty As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =32
+        FontWeight: =FontWeight.Semibold
+        Height: =78
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: |-
+            =Text(
+                Connectorsv2.ParityPercentage * 100,
+                "[$-en-US]0%"
+            )
+        Width: =120
+        X: =lblConnectorCount.X+lblConnectorCount.Width
+        Y: =Parent.Height*.0625
+        ZIndex: =5
+
+    lblParity As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =16
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Parity"
+        Width: =120
+        X: =valParty.X
+        Y: =valParty.Y+valParty.Height*.8
+        ZIndex: =6
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(128, 128, 128, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =3
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =valConnectorTotal.Width*.8
+        X: =valConnectorCount.X+valConnectorCount.Width*.9-Rectangle1.Width+8
+        Y: =valConnectorCount.Y+valConnectorCount.Height+8
+        ZIndex: =7
+

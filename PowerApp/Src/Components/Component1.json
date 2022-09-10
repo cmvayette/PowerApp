@@ -1,0 +1,118 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentDefinitionInfo": {
+    "AllowAccessToGlobals": false,
+    "Children": [],
+    "ControlPropertyState": [
+      "Fill",
+      "Height",
+      "Width",
+      "X",
+      "Y",
+      "ZIndex",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "Table({\r\n    Title: \"Power Apps\"\r\n},\r\n{\r\n    Title: \"Power Automate\"\r\n},\r\n{\r\n    Title: \"Power BI\"\r\n},\r\n{\r\n    Title: \"Power Virtual Agents\"\r\n},\r\n{\r\n    Title: \"DataVerse\"\r\n})",
+        "InvariantPropertyName": "IssueFilters",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      "IssuesCats"
+    ],
+    "LastModifiedTimestamp": "637984284694328147",
+    "Name": "Component1",
+    "Rules": [
+      {
+        "Category": "Data",
+        "InvariantScript": "Table(\n    \n    {Title: \"Power Apps\"},\n    {Title: \"Power Automate\"},\n    {Title: \"Power BI\"},\n    {Title: \"Power Virtual Agents\"},\n    {Title: \"DataVerse\"}\n)",
+        "Property": "IssueFilters",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "Component1.IssueFilters",
+        "Property": "IssuesCats",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "640",
+        "Property": "Height",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "640",
+        "Property": "Width",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
+        "RuleProviderType": "Unknown"
+      }
+    ]
+  },
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Component1",
+    "TemplateGuid": "bc4a1ab30d2d41feab4fd706a8f642e1"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "IssueFilters",
+      "Hidden": false,
+      "Name": "IssueFilters",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "IssuesCats",
+      "Hidden": true,
+      "Name": "IssuesCats",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637984284694328147",
+  "Name": "bc4a1ab30d2d41feab4fd706a8f642e1",
+  "OverridableProperties": {},
+  "Version": "637812482778534996"
+}

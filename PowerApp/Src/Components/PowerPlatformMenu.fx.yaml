@@ -1,0 +1,33 @@
+PowerPlatformMenu As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    ItemVis: ="Text"
+    Lists: =PowerPlatformMenu.MenuList
+    MenuList: |-
+        =Table(
+            {
+               Title: "Status Report",
+               Icon: Health
+            },{
+                Title: "Issue Log",
+                Icon: Bug
+            },
+            {
+                Title: "Roadmap",
+                Icon: LevelsLayersItems
+            },{
+                Title: "Knowledge Base",
+                Icon: Notebook
+            },
+            {
+                Title: "Requests",
+                Icon: Items
+            }
+            
+        )
+    TextVis: ="Text"
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

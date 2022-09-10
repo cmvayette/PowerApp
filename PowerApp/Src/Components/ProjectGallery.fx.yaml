@@ -1,0 +1,309 @@
+ProjectGallery As CanvasComponent:
+    compHeight: =200+0
+    compTable: |-
+        =Table({projectTitle: Projects.Name, SampleNumberField: 10, SampleBooleanField: true})
+    compWidth: =1100
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =ProjectGallery.compHeight
+    Width: =ProjectGallery.compWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery1 As gallery.galleryVertical:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        FocusedBorderThickness: =2
+        Height: =Parent.Height-40
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplateSize: =50
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =1
+
+        Label2 As Label:
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =
+            Width: =320
+            X: =0
+            Y: =15
+            ZIndex: =1
+
+        Label8 As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.Edit
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.SampleHeading
+            Width: =lblProject.Width
+            X: =
+            Y: =Parent.TemplateHeight*.5-Label8.Height*.5
+            ZIndex: =2
+
+        butInitial_1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(250, 155, 112, 1)
+            FontSize: =10
+            FontWeight: =FontWeight.Normal
+            Height: =24
+            HoverBorderColor: =RGBA(251, 188, 159, 1)
+            HoverFillColor: =RGBA(250, 155, 112, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="New"
+            Width: =96
+            X: =butInitial.X-4
+            Y: =Label8.Y*1.5
+            ZIndex: =3
+
+        butCrawl_1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(102, 182, 227, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(153, 207, 236, 1)
+            HoverFillColor: =RGBA(102, 182, 227, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="In Progress"
+            Width: =108
+            X: =butCrawl.X-4
+            Y: =butInitial_1.Y
+            ZIndex: =4
+
+        butWalk_1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(161, 162, 202, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(161, 162, 202, 1)
+            HoverFillColor: =RGBA(161, 162, 202, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Done"
+            Width: =96
+            X: =butWalk.X-4
+            Y: =butCrawl_1.Y
+            ZIndex: =5
+
+        butRun_1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(203, 102, 102, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(203, 102, 102, 1)
+            HoverFillColor: =RGBA(203, 102, 102, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Blocked"
+            Width: =96
+            X: =butRun.X-4
+            Y: =butWalk_1.Y
+            ZIndex: =6
+
+        Label8_1 As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.Edit
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.SampleHeading
+            Width: =lblProject.Width
+            X: =lblAssigned.X
+            Y: =butRun_1.Y
+            ZIndex: =7
+
+        Label8_2 As Label:
+            Alignment: =Align.Right
+            DisplayMode: =DisplayMode.Edit
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.SampleHeading
+            Width: =lblProject.Width
+            X: =lblDate.X
+            Y: =butRun_1.Y
+            ZIndex: =8
+
+    ButtonGroup As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =8
+
+        butInitial As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(250, 155, 112, 1)
+            FontSize: =10
+            FontWeight: =FontWeight.Normal
+            Height: =24
+            HoverBorderColor: =RGBA(251, 188, 159, 1)
+            HoverFillColor: =RGBA(250, 155, 112, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="New"
+            Width: =96
+            X: =RectFirst.X + 16
+            Y: =lblProject.Y+6
+            ZIndex: =4
+
+        butCrawl As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(102, 182, 227, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(153, 207, 236, 1)
+            HoverFillColor: =RGBA(102, 182, 227, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="In Progress"
+            Width: =108
+            X: =butInitial.X+butInitial.Width + 16
+            Y: =lblProject.Y+6
+            ZIndex: =5
+
+        butWalk As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(161, 162, 202, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(161, 162, 202, 1)
+            HoverFillColor: =RGBA(161, 162, 202, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Done"
+            Width: =96
+            X: =butCrawl.X+butCrawl.Width + 16
+            Y: =lblProject.Y+6
+            ZIndex: =6
+
+        butRun As Button:
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =RGBA(203, 102, 102, 1)
+            FontSize: =10
+            Height: =24
+            HoverBorderColor: =RGBA(203, 102, 102, 1)
+            HoverFillColor: =RGBA(203, 102, 102, 1)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Blocked"
+            Width: =96
+            X: =butWalk.X+butInitial.Width + 16
+            Y: =lblProject.Y+6
+            ZIndex: =7
+
+    RectSecond_1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =1
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =Parent.Width*.95
+        X: =Parent.Width*.025
+        Y: =lblProject.Y+lblProject.Height
+        ZIndex: =12
+
+    LabelsGroup As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =12
+
+        lblProject As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =10
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Project Title"
+            Width: =Parent.Width/8
+            X: =4
+            Y: =
+            ZIndex: =2
+
+        lblAssigned As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =10
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Assigned to"
+            Width: =Parent.Width/8
+            X: =RectSecond.X+16
+            Y: =
+            ZIndex: =9
+
+        lblDate As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =10
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: ="Expected Delivery Date"
+            Width: =Parent.Width/5
+            X: =RectThird.X+16
+            Y: =
+            ZIndex: =11
+
+    RectGroup As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =12
+
+        RectFirst As rectangle:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(200, 198, 196, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =lblProject.Height-8
+            HoverFill: =RGBA(98, 100, 167, 1)
+            PressedFill: =RGBA(98, 100, 167, 1)
+            Width: =1
+            X: =lblProject.Width+lblProject.X-2
+            Y: =lblProject.Y+4
+            ZIndex: =3
+
+        RectSecond As rectangle:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(200, 198, 196, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =lblProject.Height-8
+            HoverFill: =RGBA(98, 100, 167, 1)
+            PressedFill: =RGBA(98, 100, 167, 1)
+            Width: =1
+            X: =butRun.X+butRun.Width+16
+            Y: =lblProject.Y+4
+            ZIndex: =8
+
+        RectThird As rectangle:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(200, 198, 196, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =lblProject.Height-8
+            HoverFill: =RGBA(98, 100, 167, 1)
+            PressedFill: =RGBA(98, 100, 167, 1)
+            Width: =1
+            X: =lblAssigned.X+lblAssigned.Width+16
+            Y: =lblProject.Y+4
+            ZIndex: =10
+

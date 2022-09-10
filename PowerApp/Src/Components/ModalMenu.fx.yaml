@@ -1,0 +1,291 @@
+ModalMenu As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =ModalMenu.varHeight
+    varBoxHeight: =rectMenu.Height
+    varBoxWidth: =rectMenu.Width
+    varBoxX: =rectMenu.X
+    varBoxY: =rectMenu.Y
+    varHeight: =Max(App.Height, App.MinScreenHeight)
+    varLineLoc: |-
+        ={LineX: rectBreakBreak.X, LineY: rectBreakBreak.Y, LineWidth: rectBreakBreak.Width}
+    varTitle: =
+    varWidth: =Max(App.Width, App.MinScreenWidth)
+    Width: =ModalMenu.varWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    rectBackground As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(0, 0, 0, .6)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =Parent.Height
+        HoverFill: =RGBA(0, 0, 0, 0.6)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =Parent.Width
+        X: =0+0
+        Y: =0+0
+        ZIndex: =1
+
+    rectMenu As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =Parent.Height*.85
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Visible: =false
+        Width: =Parent.Width*.5
+        X: =Parent.Width*.5-rectMenu.Width*.5
+        Y: =Parent.Height*.125
+        ZIndex: =2
+
+    HtmlText2 As htmlViewer:
+        Height: =rectMenu.Height
+        HtmlText: |-
+            ="<div style='background-color: #FFFFFF; width: "& rectMenu.Width*.975 &"px;height: "& rectMenu.Height*.9 &"px; box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);'></div>"
+        Width: =rectMenu.Width
+        X: =rectMenu.X
+        Y: =rectMenu.Y
+        ZIndex: =3
+
+    lblMenuTitle As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =ModalMenu.varTitle
+        VerticalAlignment: =VerticalAlign.Top
+        Width: =320
+        X: =rectBreakBreak.X+rectBreakBreak.Width*.5-lblMenuTitle.Width*.5
+        Y: =rectMenu.Y+rectBreakBreak.Y*.5-lblMenuTitle.Height*1.3
+        ZIndex: =4
+
+    rectBreakBreak As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(49, 50, 83, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =5
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =rectMenu.Width*.8
+        X: =rectMenu.X+rectMenu.Width*.1
+        Y: =rectMenu.Y+rectMenu.Height*.1125
+        ZIndex: =5
+
+    Icon5_2 As icon.Add:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(98, 100, 167, 1)
+        DisabledBorderColor: =RGBA(243, 242, 241, 1)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =32
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(varModalIssue, false)
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =32
+        X: =rectMenu.X+rectMenu.Width-Self.Width*1.5
+        Y: =rectMenu.Y+Self.Height*.25
+        ZIndex: =6
+
+    "cmbIssueCat_2 As 'Combo box'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: =["Power Apps", "Power Automate", "Power BI", "Power Virtual Agents", "DataVerse"]
+        PCFTeamsTheme: =TeamsTheme.Default
+        Visible: =true
+        Width: =ModalMenu.varLineLoc.LineWidth-lblIssueCat_2.Width
+        X: =lblIssueCat_2.X+lblIssueCat_2.Width
+        Y: =lblIssueCat_2.Y
+        ZIndex: =7
+
+        Value1_2 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =6
+
+    lblIssueCat_2 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Category"
+        Visible: =true
+        Width: =ModalMenu.varLineLoc.LineWidth*.2
+        X: =ModalMenu.varLineLoc.LineX
+        Y: =ModalMenu.varLineLoc.LineY+8
+        ZIndex: =8
+
+    lblIssueTitle_2 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Title"
+        Visible: =true
+        Width: =ModalMenu.varLineLoc.LineWidth*.2
+        X: =ModalMenu.varLineLoc.LineX
+        Y: =lblIssueCat_2.Y+lblIssueCat_2.Height*1.5
+        ZIndex: =9
+
+    "txtIssueTitle_2 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Short Title of Issue"
+        Value: =""
+        Visible: =true
+        Width: =cmbIssueCat_2.Width
+        X: =cmbIssueCat_2.X
+        Y: =lblIssueTitle_2.Y
+        ZIndex: =10
+
+    lblIssueDesc_2 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Description"
+        Visible: =true
+        Width: =ModalMenu.varLineLoc.LineWidth*.2
+        X: =ModalMenu.varLineLoc.LineX
+        Y: =lblIssueTitle_2.Y+lblIssueCat_2.Height*1.5
+        ZIndex: =11
+
+    "txtIssueDesc_2 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =96
+        Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+        PCFTeamsTheme: =TeamsTheme.Default
+        Placeholder: ="Short Title of Issue, please include as many details as possible to help reproduce."
+        Value: =""
+        Visible: =true
+        Width: =cmbIssueCat_2.Width
+        X: =cmbIssueCat_2.X
+        Y: =lblIssueDesc_2.Y
+        ZIndex: =12
+
+    UploadedImage1_2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =AddMediaButton1_2.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =If(IsBlank(AddMediaButton1_2.Media), SampleImage, AddMediaButton1_2.Media)
+        ImagePosition: =ImagePosition.Fill
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Width: =AddMediaButton1_2.Width
+        X: =AddMediaButton1_2.X
+        Y: =AddMediaButton1_2.Y
+        ZIndex: =13
+
+    AddMediaButton1_2 As addMedia:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(200, 198, 196, 1)
+        DisabledFill: =RGBA(243, 242, 241, 1)
+        Fill: =RGBA(98, 100, 167, 1)
+        Font: =Font.'Segoe UI'
+        Height: =ModalMenu.Height*.25
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(98, 100, 167, 1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(98, 100, 167, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        Size: =25
+        Text: ="click to add a screenshot"
+        Width: =ModalMenu.varLineLoc.LineWidth*.5
+        X: =ModalMenu.varLineLoc.LineX+ModalMenu.varLineLoc.LineWidth*.5-AddMediaButton1_2.Width*.5
+        Y: =ModalMenu.varBoxHeight-AddMediaButton1_2.Height*1.25
+        ZIndex: =14
+
+    Button5_2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Lighter
+        Height: =32
+        OnSelect: |
+            =Patch(
+                PlatformIssues,
+                Defaults(PlatformIssues),
+                {
+                    Category: cmbIssueCat_2.Selected.Value,
+                    Name: txtIssueTitle_2.Value,
+                    Details: txtIssueDesc_2.Value,
+                    Reportedby: User().FullName,
+                    DateReported: Today(),
+                    IssueStatus: "New"
+                }
+            );
+            Set(
+                varDemoFormAttachmentControl,
+                JSON(
+                    UploadedImage1_2.Image,
+                    JSONFormat.IncludeBinaryData
+                )
+            );
+            Set(
+                VarBase64Only,
+                Mid(
+                    varDemoFormAttachmentControl,
+                    Find(
+                        ",",
+                        varDemoFormAttachmentControl
+                    ) + 1,
+                    Len(varDemoFormAttachmentControl) - Find(
+                        ",",
+                        varDemoFormAttachmentControl
+                    ) - 1
+                )
+            );
+            Notify("Issue Reported!");
+            Set(
+                varModalIssue,
+                false
+            );
+            AppImagetoSPO.Run(
+                txtIssueTitle_2.Value,
+                {
+                    contentBytes: UploadedImage1_2.Image,
+                    name: Text(
+                        Now(),
+                        "yyMMddhhmmss"
+                    )
+                }
+            );
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Submit"
+        Visible: =true
+        Width: =96
+        X: =rectMenu.X+rectMenu.Width-Self.Width*1.2
+        Y: =ModalMenu.varBoxHeight-Self.Height*.1
+        ZIndex: =15
+

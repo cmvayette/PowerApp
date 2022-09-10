@@ -1,0 +1,82 @@
+ShadowBox As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    ShadowBoxHeight: =100
+    ShadowBoxWidth: =100
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    HtmlText1 As htmlViewer:
+        Height: =ShadowBox.ShadowBoxHeight
+        HtmlText: |-
+            ="<div style='background-color: rgba(70,71,117,1); width: " & ShadowBox.ShadowBoxWidth & "px;height: 80px; box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);'></div>"
+        Width: =ShadowBox.ShadowBoxWidth
+        X: =
+        Y: =
+        ZIndex: =1
+
+    Imgplatform As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =ShadowBox.ShadowBoxHeight*.9
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =PlatformTitle
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Width: =Parent.Width/10+0
+        X: =ShadowBox.ShadowBoxWidth-imgDisassembled.Width*1.25-Imgplatform.Width
+        Y: =4+0
+        ZIndex: =2
+
+    imgDisassembled As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =ShadowBox.ShadowBoxHeight*.9
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =disassembled
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Width: =Parent.Width/8
+        X: =ShadowBox.ShadowBoxWidth-imgDisassembled.Width*1.25
+        Y: =
+        ZIndex: =3
+
+    imgJohnny5 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Height: =ShadowBox.ShadowBoxHeight*.875
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =Johnny5Face_White
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Width: =ShadowBox.Width/10
+        X: =ShadowBox.ShadowBoxWidth-imgDisassembled.Width*1.25-Imgplatform.Width-imgJohnny5.Width
+        Y: =
+        ZIndex: =4
+

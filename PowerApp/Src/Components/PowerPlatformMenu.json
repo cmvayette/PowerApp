@@ -1,0 +1,150 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentDefinitionInfo": {
+    "AllowAccessToGlobals": false,
+    "Children": [],
+    "ControlPropertyState": [
+      "Fill",
+      "Height",
+      "Width",
+      "X",
+      "Y",
+      "ZIndex",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "Table(\n    {\n       Title: \"Status Report\",\n       Icon: Health\n    },{\n        Title: \"Issue Log\",\n        Icon: Bug\n    },\n    {\n        Title: \"Roadmap\",\n        Icon: LevelsLayersItems\n    },\n    {\n        Title: \"Requests\",\n        Icon: Items\n    }\n    \n)",
+        "InvariantPropertyName": "Lists",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      "ItemVis",
+      "TextVis",
+      "MenuList"
+    ],
+    "LastModifiedTimestamp": "637984284694315015",
+    "Name": "PowerPlatformMenu",
+    "Rules": [
+      {
+        "Category": "Data",
+        "InvariantScript": "PowerPlatformMenu.MenuList",
+        "Property": "Lists",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Text\"",
+        "Property": "ItemVis",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Text\"",
+        "Property": "TextVis",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "Table(\r\n    {\r\n       Title: \"Status Report\",\r\n       Icon: Health\r\n    },{\r\n        Title: \"Issue Log\",\r\n        Icon: Bug\r\n    },\r\n    {\r\n        Title: \"Roadmap\",\r\n        Icon: LevelsLayersItems\r\n    },{\r\n        Title: \"Knowledge Base\",\r\n        Icon: Notebook\r\n    },\r\n    {\r\n        Title: \"Requests\",\r\n        Icon: Items\r\n    }\r\n    \r\n)",
+        "Property": "MenuList",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "640",
+        "Property": "Width",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "640",
+        "Property": "Height",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
+      }
+    ]
+  },
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "PowerPlatformMenu",
+    "TemplateGuid": "cf94202d07c244f49aeb739f75d716ac"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Lists",
+      "Hidden": true,
+      "Name": "Lists",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ItemVis",
+      "Hidden": false,
+      "Name": "ItemVis",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "TextVis",
+      "Hidden": true,
+      "Name": "TextVis",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "MenuList",
+      "Hidden": false,
+      "Name": "MenuList",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637984284694315015",
+  "Name": "cf94202d07c244f49aeb739f75d716ac",
+  "OverridableProperties": {},
+  "Version": "637807343236219360"
+}

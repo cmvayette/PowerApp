@@ -1,0 +1,139 @@
+Gateway As CanvasComponent:
+    contHeight: =140
+    contWidth: =470+0
+    CurrentPhase: =1
+    CustomConnectorCount: =0
+    Fill: =RGBA(0, 0, 0, 0)
+    GateWayCount: =0
+    Height: =Gateway.contHeight
+    TotalPhase: =8
+    Width: =Gateway.contWidth-16
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(128, 128, 128, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =3
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =Parent.Width*.66
+        X: =Parent.Width*.5-Rectangle2.Width*.5
+        Y: =Parent.Height*.33
+        ZIndex: =1
+
+    Rectangle2_1 As rectangle:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(200, 198, 196, 1)
+        Fill: =RGBA(128, 128, 128, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        Height: =3
+        HoverFill: =RGBA(98, 100, 167, 1)
+        PressedFill: =RGBA(98, 100, 167, 1)
+        Width: =Parent.Width*.66
+        X: =Parent.Width*.5-Rectangle2_1.Width*.5
+        Y: =Parent.Height*.66
+        ZIndex: =2
+
+    lblRoadmap As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Phase of Roadmap"
+        Width: =170
+        X: =240
+        Y: =lblCurrentPhase.Y
+        ZIndex: =3
+
+    lblDataGateways As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="DataVerse Environments"
+        Width: =170
+        X: =240
+        Y: =56
+        ZIndex: =4
+
+    lblConnectorLabel As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="Custom Connectors"
+        Width: =170
+        X: =240
+        Y: =106
+        ZIndex: =5
+
+    lblCurrentPhase As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Gateway.CurrentPhase
+        Width: =40
+        X: =Rectangle2.X
+        Y: =Rectangle2.Y-lblCurrentPhase.Height*1.2
+        ZIndex: =6
+
+    lblSlash As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: ="/"
+        Width: =27
+        X: =lblCurrentPhase.X+lblCurrentPhase.Width
+        Y: =lblCurrentPhase.Y
+        ZIndex: =7
+
+    lblTotalPhase As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Gateway.TotalPhase
+        Width: =48
+        X: =lblSlash.X+lblSlash.Width
+        Y: =lblCurrentPhase.Y
+        ZIndex: =8
+
+    lblSlash_1 As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Gateway.GateWayCount
+        Width: =27
+        X: =lblCurrentPhase.X+lblCurrentPhase.Width
+        Y: =Rectangle2_1.Y-lblSlash.Height*1.2
+        ZIndex: =9
+
+    lblSlash_2 As Label:
+        Alignment: =Align.Center
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Gateway.CustomConnectorCount
+        Width: =27
+        X: =lblCurrentPhase.X+lblCurrentPhase.Width
+        Y: =lblConnectorLabel.Y
+        ZIndex: =10
+

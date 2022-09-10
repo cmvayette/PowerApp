@@ -1,0 +1,172 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(98, 100, 167, 1)
+
+    Button1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =If(DateDiff(Today(), dte_Event_StartDate.Value) <= 2, true, false)
+        PCFTeamsTheme: =TeamsTheme.Default
+        Visible: =If(DateDiff(Today(), dte_Event_StartDate.Value) <= 2, true, false)
+        Width: =96
+        X: =598
+        Y: =60
+        ZIndex: =1
+
+    "dte_Event_StartDate As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =210
+        X: =276
+        Y: =200
+        ZIndex: =2
+
+    Button2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(varShowAlert, false)
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =96
+        X: =60
+        Y: =60
+        ZIndex: =3
+
+    Label5 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Text: =Planner.GetPlanDetails("mIP_272LLEya9fAezCBFF4wAHjde").categoryDescriptions.category20
+        Width: =320
+        X: =932
+        Y: =340
+        ZIndex: =4
+
+    DataTable1 As dataTable.datatable:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(37, 36, 35, 1)
+        DisabledColor: =RGBA(200, 198, 196, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(98, 100, 167, 1)
+        HeadingFont: =Font.'Segoe UI'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =10.5
+        Height: =500
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(98, 100, 167, 1)
+        InputFill: =RGBA(243, 242, 241, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =Planner.GetPlanDetails("mIP_272LLEya9fAezCBFF4wAHjde")
+        LinkColor: =RGBA(0, 134, 208, 1)
+        PrimaryColor1: =RGBA(98, 100, 167, 1)
+        PrimaryColor2: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(98, 100, 167, 1), -50%)
+        SelectedColor: =RGBA(37, 36, 35, 1)
+        SelectedFill: =RGBA(98, 100, 167, .2)
+        Size: =10.5
+        Width: =800
+        X: =115
+        Y: =92
+        ZIndex: =5
+
+        id_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="id"
+            FieldName: ="id"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.id
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    contBody_3 As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height-contBody_3.Y
+        Visible: =If(User().FullName = "Corey Vayette", true, false)
+        Width: =Parent.Width
+        X: =
+        Y: =contHeader_2.Y+contHeader_2.Height*1.33
+        ZIndex: =6
+
+        contContent_3 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height
+            Width: =Parent.Width
+            ZIndex: =1
+
+            contCard1_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height*.95
+                Width: =Parent.Width/5.75
+                X: =Parent.Width*.025
+                Y: =4
+                ZIndex: =2
+
+                ShadowBoxMap_1 As ShadowBoxMap:
+                    Height: =608.3039999999999
+                    ShadowBoxHeight: =Parent.Height*1.075
+                    ShadowBoxWidth: =Parent.Width
+                    varHeaderTitle: ="Strategy"
+                    Width: =Parent.Width
+
+            contCard2_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height*.95
+                Width: =contCard1_1.Width
+                X: =contCard1_1.X+contCard1_1.Width*1.1
+                Y: =contCard1_1.Y
+                ZIndex: =3
+
+                ShadowBoxMap_2 As ShadowBoxMap:
+                    Height: =608.3039999999999
+                    ShadowBoxHeight: =Parent.Height*1.075
+                    ShadowBoxWidth: =Parent.Width
+                    varHeaderTitle: ="Administration"
+                    Width: =Parent.Width+0
+
+            contCard3_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height*.95
+                Width: =contCard1_1.Width
+                X: =contCard1_1.Width*1.1+contCard2_1.X
+                Y: =contCard1_1.Y
+                ZIndex: =4
+
+                ShadowBoxMap_3 As ShadowBoxMap:
+                    Height: =608.3039999999999
+                    ShadowBoxHeight: =Parent.Height*1.075
+                    ShadowBoxWidth: =Parent.Width
+                    varHeaderTitle: ="Support"
+                    Width: =Parent.Width+0
+
+            contCard4_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height*.95
+                Width: =contCard1_1.Width
+                X: =contCard1_1.Width*1.1+contCard3_1.X
+                Y: =contCard1_1.Y
+                ZIndex: =5
+
+                ShadowBoxMap_4 As ShadowBoxMap:
+                    Height: =608.3039999999999
+                    ShadowBoxHeight: =Parent.Height*1.075
+                    ShadowBoxWidth: =Parent.Width
+                    varHeaderTitle: ="Community"
+                    Width: =Parent.Width+0
+
+            contCard5_1 As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height*.95
+                Width: =contCard1_1.Width
+                X: =contCard1_1.Width*1.1+contCard4_1.X
+                Y: =contCard1_1.Y
+                ZIndex: =6
+
+                ShadowBoxMap_5 As ShadowBoxMap:
+                    Height: =608.3039999999999
+                    ShadowBoxHeight: =Parent.Height*1.075
+                    ShadowBoxWidth: =Parent.Width
+                    varHeaderTitle: ="Development"
+                    Width: =Parent.Width+0
+

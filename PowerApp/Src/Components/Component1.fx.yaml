@@ -1,0 +1,18 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    IssueFilters: |-
+        =Table(
+            
+            {Title: "Power Apps"},
+            {Title: "Power Automate"},
+            {Title: "Power BI"},
+            {Title: "Power Virtual Agents"},
+            {Title: "DataVerse"}
+        )
+    IssuesCats: =Component1.IssueFilters
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

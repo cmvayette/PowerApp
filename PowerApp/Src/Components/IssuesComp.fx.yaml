@@ -1,0 +1,93 @@
+IssuesComp As CanvasComponent:
+    DataVerse: =Dataverse_scalable
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =IssuesComp.varHeight
+    PowerApps: =PowerApps_scalable
+    PowerAutomate: =PowerAutomate_scalable
+    PowerBI: =PowerBI_scalable
+    PowerVirtualAgents: =PowerVirtualAgents_scalable
+    PPStatus: |-
+        =Table(
+            {
+                Name: "Power Apps",
+                Image: PowerApps_scalable,
+                IssueCount: 8
+            },
+            {
+                Name: "Power Automate",
+                Image: PowerAutomate_scalable,
+                 IssueCount: 8
+            },
+            {
+                Name: "Power BI",
+                Image: PowerBI_scalable,
+                 IssueCount: 8
+            },
+            {
+                Name: "Power Virtual Agents",
+                Image: PowerVirtualAgents_scalable,
+                 IssueCount: 8
+            },
+            {
+                Name: "DataVerse",
+                Image: Dataverse_scalable,
+                 IssueCount: 8
+            }
+        )
+    varHeight: =120
+    varWidth: =1100
+    Visible: =false
+    Width: =IssuesComp.varWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery2 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        FocusedBorderThickness: =2
+        Height: =IssuesComp.varHeight
+        Items: =IssuesComp.PPStatus
+        ShowScrollbar: =false
+        TemplateSize: =Parent.Width/5
+        Width: =IssuesComp.varWidth
+        Y: =
+        ZIndex: =1
+
+        Image1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height*.5
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Width: =Parent.TemplateWidth*.33
+            X: =Parent.TemplateWidth*.5-Image1.Width*.5
+            Y: =Parent.TemplateHeight*.5-Image1.Height*.5
+            ZIndex: =2
+
+        Label6 As Label:
+            Alignment: =Align.Center
+            DisplayMode: =DisplayMode.View
+            FontSize: =24
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height*.5
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.IssueCount
+            VerticalAlignment: =VerticalAlign.Middle
+            Width: =Parent.TemplateWidth*.3
+            X: =Image1.X-Label6.Width
+            Y: =Image1.Y+Image1.Height*.5-Label6.Height*.5
+            ZIndex: =3
+
