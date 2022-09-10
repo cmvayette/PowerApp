@@ -23,7 +23,7 @@
       "TextVis",
       "MenuList"
     ],
-    "LastModifiedTimestamp": "637984497122132574",
+    "LastModifiedTimestamp": "637984376954278328",
     "Name": "PowerPlatformMenu",
     "Rules": [
       {
@@ -143,7 +143,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637984497122132574",
+  "LastModifiedTimestamp": "637984376954278328",
   "Name": "cf94202d07c244f49aeb739f75d716ac",
   "OverridableProperties": {},
   "Version": "637807343236219360"
