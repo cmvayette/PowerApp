@@ -1,0 +1,12 @@
+"'727c5cf5-bd8e-44bd-80a1-dbe9b1633f77' As TestSuite":
+    Description: =""
+    DisplayName: ="Suite"
+
+    "'47ec9df2-2859-4f25-9c9c-c73662a79c96' As TestCase":
+        Description: =""
+        DisplayName: ="Case"
+
+        Step1 As TestStep:
+            Description: ="Switch between screens"
+            Value: =Select(
+
