@@ -713,7 +713,7 @@ scrIssueLog As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =varModalIssue
+            Visible: =false
             Width: =32
             X: =ModalMenu_2.varLineLoc.LineX+ModalMenu_2.varLineLoc.LineWidth-Self.Width*.2
             Y: =(ModalMenu_2.varLineLoc.LineY-Self.Height*1.5)

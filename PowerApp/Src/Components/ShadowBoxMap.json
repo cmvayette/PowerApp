@@ -73,7 +73,7 @@
         "Name": "HtmlText1_2",
         "Parent": "ShadowBoxMap",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 324,
+        "PublishOrderIndex": 306,
         "Rules": [
           {
             "Category": "Data",
@@ -302,7 +302,7 @@
                 "Name": "Label9",
                 "Parent": "contshdBoxMapHeader",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 327,
+                "PublishOrderIndex": 309,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -482,7 +482,7 @@
                 "Name": "Icon7",
                 "Parent": "contshdBoxMapHeader",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 328,
+                "PublishOrderIndex": 310,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -737,7 +737,7 @@
             "Name": "contshdBoxMapHeader",
             "Parent": "contshdBoxMapBody",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 326,
+            "PublishOrderIndex": 308,
             "Rules": [
               {
                 "Category": "Design",
@@ -956,7 +956,7 @@
                     "Name": "Label11",
                     "Parent": "Container2",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 331,
+                    "PublishOrderIndex": 313,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1104,7 +1104,7 @@
                 "Name": "Container2",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 330,
+                "PublishOrderIndex": 312,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1320,7 +1320,7 @@
                     "Name": "Label11_1",
                     "Parent": "Container2_1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 333,
+                    "PublishOrderIndex": 315,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1468,7 +1468,7 @@
                 "Name": "Container2_1",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 332,
+                "PublishOrderIndex": 314,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1684,7 +1684,7 @@
                     "Name": "Label11_2",
                     "Parent": "Container2_2",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 335,
+                    "PublishOrderIndex": 317,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1832,7 +1832,7 @@
                 "Name": "Container2_2",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 334,
+                "PublishOrderIndex": 316,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2056,7 +2056,7 @@
                     "Name": "Label11_3",
                     "Parent": "Container2_3",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 337,
+                    "PublishOrderIndex": 319,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2210,7 +2210,7 @@
                 "Name": "Container2_3",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 336,
+                "PublishOrderIndex": 318,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2426,7 +2426,7 @@
                     "Name": "Label11_4",
                     "Parent": "Container2_4",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 339,
+                    "PublishOrderIndex": 321,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2574,7 +2574,7 @@
                 "Name": "Container2_4",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 338,
+                "PublishOrderIndex": 320,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2798,7 +2798,7 @@
                     "Name": "Label11_5",
                     "Parent": "Container2_5",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 341,
+                    "PublishOrderIndex": 323,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2952,7 +2952,7 @@
                 "Name": "Container2_5",
                 "Parent": "contshdBoxMapCont",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 340,
+                "PublishOrderIndex": 322,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3134,7 +3134,7 @@
             "Name": "contshdBoxMapCont",
             "Parent": "contshdBoxMapBody",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 329,
+            "PublishOrderIndex": 311,
             "Rules": [
               {
                 "Category": "Design",
@@ -3316,7 +3316,7 @@
         "Name": "contshdBoxMapBody",
         "Parent": "ShadowBoxMap",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 325,
+        "PublishOrderIndex": 307,
         "Rules": [
           {
             "Category": "Design",

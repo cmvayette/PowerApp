@@ -82,7 +82,7 @@
         "Name": "lblCurrentPhase",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 265,
+        "PublishOrderIndex": 247,
         "Rules": [
           {
             "Category": "Data",
@@ -240,7 +240,7 @@
         "Name": "lblSlash",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 266,
+        "PublishOrderIndex": 248,
         "Rules": [
           {
             "Category": "Data",
@@ -398,7 +398,7 @@
         "Name": "lblTotalPhase",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 267,
+        "PublishOrderIndex": 249,
         "Rules": [
           {
             "Category": "Data",
@@ -525,7 +525,7 @@
         "Name": "lblRoadmap",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 268,
+        "PublishOrderIndex": 250,
         "Rules": [
           {
             "Category": "Data",
@@ -662,7 +662,7 @@
         "Name": "Rectangle2",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 269,
+        "PublishOrderIndex": 251,
         "Rules": [
           {
             "Category": "Design",
@@ -804,7 +804,7 @@
         "Name": "lblDataGateways",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 270,
+        "PublishOrderIndex": 252,
         "Rules": [
           {
             "Category": "Data",
@@ -944,7 +944,7 @@
         "Name": "lblSlash_1",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 271,
+        "PublishOrderIndex": 253,
         "Rules": [
           {
             "Category": "Data",
@@ -1099,7 +1099,7 @@
         "Name": "Rectangle2_1",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 272,
+        "PublishOrderIndex": 254,
         "Rules": [
           {
             "Category": "Design",
@@ -1279,7 +1279,7 @@
         "Name": "lblSlash_2",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 273,
+        "PublishOrderIndex": 255,
         "Rules": [
           {
             "Category": "Data",
@@ -1399,7 +1399,7 @@
         "Name": "lblConnectorLabel",
         "Parent": "Gateway",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 274,
+        "PublishOrderIndex": 256,
         "Rules": [
           {
             "Category": "Data",

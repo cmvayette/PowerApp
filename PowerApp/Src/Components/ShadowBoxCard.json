@@ -73,7 +73,7 @@
         "Name": "HtmlText1_1",
         "Parent": "ShadowBoxCard",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 253,
+        "PublishOrderIndex": 235,
         "Rules": [
           {
             "Category": "Data",

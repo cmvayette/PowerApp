@@ -75,7 +75,7 @@
         "Name": "valParty",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 258,
+        "PublishOrderIndex": 240,
         "Rules": [
           {
             "Category": "Data",
@@ -240,7 +240,7 @@
         "Name": "valConnectorCount",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 259,
+        "PublishOrderIndex": 241,
         "Rules": [
           {
             "Category": "Data",
@@ -381,7 +381,7 @@
         "Name": "lblConnectorCount",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 260,
+        "PublishOrderIndex": 242,
         "Rules": [
           {
             "Category": "Data",
@@ -518,7 +518,7 @@
         "Name": "Rectangle1",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 261,
+        "PublishOrderIndex": 243,
         "Rules": [
           {
             "Category": "Design",
@@ -698,7 +698,7 @@
         "Name": "lblParity",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 262,
+        "PublishOrderIndex": 244,
         "Rules": [
           {
             "Category": "Data",
@@ -863,7 +863,7 @@
         "Name": "valConnectorTotal",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 263,
+        "PublishOrderIndex": 245,
         "Rules": [
           {
             "Category": "Data",
@@ -1004,7 +1004,7 @@
         "Name": "lblConnectorTotal",
         "Parent": "Connectorsv2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 264,
+        "PublishOrderIndex": 246,
         "Rules": [
           {
             "Category": "Data",

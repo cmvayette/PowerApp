@@ -26,7 +26,7 @@
             "Name": "galleryTemplate3",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 255,
+            "PublishOrderIndex": 237,
             "Rules": [
               {
                 "Category": "Design",
@@ -152,7 +152,7 @@
             "Name": "Label6",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 256,
+            "PublishOrderIndex": 238,
             "Rules": [
               {
                 "Category": "Data",
@@ -327,7 +327,7 @@
             "Name": "Image1",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 257,
+            "PublishOrderIndex": 239,
             "Rules": [
               {
                 "Category": "Data",
@@ -617,7 +617,7 @@
         "Name": "Gallery2",
         "Parent": "IssuesComp",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 254,
+        "PublishOrderIndex": 236,
         "Rules": [
           {
             "Category": "Data",

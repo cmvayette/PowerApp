@@ -92,7 +92,7 @@
             "Name": "lblRumblingTitle_1",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 369,
+            "PublishOrderIndex": 351,
             "Rules": [
               {
                 "Category": "Data",
@@ -247,7 +247,7 @@
             "Name": "Rectangle3_1",
             "Parent": "Container1_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 370,
+            "PublishOrderIndex": 352,
             "Rules": [
               {
                 "Category": "Design",
@@ -417,7 +417,7 @@
         "Name": "Container1_1",
         "Parent": "compEventLog",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 368,
+        "PublishOrderIndex": 350,
         "Rules": [
           {
             "Category": "Design",
@@ -620,7 +620,7 @@
         "Name": "Icon1_1",
         "Parent": "compEventLog",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 371,
+        "PublishOrderIndex": 353,
         "Rules": [
           {
             "Category": "Design",
@@ -850,7 +850,7 @@
             "Name": "galleryTemplate6_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 373,
+            "PublishOrderIndex": 355,
             "Rules": [
               {
                 "Category": "Design",
@@ -959,7 +959,7 @@
             "Name": "lblTitle_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 374,
+            "PublishOrderIndex": 356,
             "Rules": [
               {
                 "Category": "Data",
@@ -1146,7 +1146,7 @@
             "Name": "lblFirstLine_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 375,
+            "PublishOrderIndex": 357,
             "Rules": [
               {
                 "Category": "Data",
@@ -1333,7 +1333,7 @@
             "Name": "lblPersText_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 376,
+            "PublishOrderIndex": 358,
             "Rules": [
               {
                 "Category": "Data",
@@ -1494,7 +1494,7 @@
             "Name": "lblReportDate_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 377,
+            "PublishOrderIndex": 359,
             "Rules": [
               {
                 "Category": "Data",
@@ -1666,7 +1666,7 @@
             "Name": "rectPersBox_1",
             "Parent": "Gallery5_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 378,
+            "PublishOrderIndex": 360,
             "Rules": [
               {
                 "Category": "Design",
@@ -1872,7 +1872,7 @@
         "Name": "Gallery5_1",
         "Parent": "compEventLog",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 372,
+        "PublishOrderIndex": 354,
         "Rules": [
           {
             "Category": "Data",
