@@ -59,7 +59,18 @@ Landing As screen:
             varLabelX,
             Label7.X
         );
-        Set(varSpecVis, "Nope")
+        Set(varSpecVis, "Nope");
+        ClearCollect(colPlatformFeatures,  {
+                FeatureCategory: "",
+                Name: "",
+                FeatureDetails: "",
+                RequestedBy: User().FullName,
+                RequestedByEmail: User().Email,
+                DateofInformation: Today(),
+                FeatureStatus: "Pending",
+                FeatureLink: ""
+            }
+        );
 
     PowerPlatformMenu_1 As PowerPlatformMenu:
         Height: =565.44

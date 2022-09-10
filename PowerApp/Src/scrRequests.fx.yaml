@@ -315,7 +315,7 @@ scrRequests As screen:
                         Items: |-
                             =With(
                                 {
-                                    records: Filter(PlatformFeatures, FeatureCategory=varIssueFilter)
+                                    records: Filter(colPlatformFeatures, FeatureCategory=varIssueFilter)
                                 },
                                 ForAll(
                                     Sequence(CountRows(records)),
@@ -485,7 +485,7 @@ scrRequests As screen:
                         FocusedBorderColor: =RGBA(98, 100, 167, 1)
                         FocusedBorderThickness: =2
                         Height: =Parent.Height*.5-contCard4TitleLabel_3.Height
-                        Items: =LookUp(AppDocs, Title=varRecord.cr5f0_name)
+                        Items: =LookUp(AppDocs, Title=varRecord.Name)
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
                         TemplateSize: =Parent.Height*.5-contCard4TitleLabel_3.Height
@@ -539,7 +539,7 @@ scrRequests As screen:
                         Layout: =Layout.Vertical
                         ShowScrollbar: =false
                         TemplateSize: =Parent.Height*.4
-                        Visible: =If(varDetVis="Nope", false, true)
+                        Visible: =If(varSpecVis="Nope", false, true)
                         Width: =Parent.Width
                         X: =
                         Y: =Parent.Height*.5+contCard4TitleLabel_3.Height-16
@@ -582,7 +582,7 @@ scrRequests As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_requestedby
+                            Text: =varRecord.RequestedBy
                             Width: =lblReportedBy_1.Width*1.2
                             X: =lblReportedBy_1.X+lblReportedBy_1.Width
                             Y: =lblReportedBy_1.Y
@@ -609,7 +609,7 @@ scrRequests As screen:
                             Height: =32
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_dateofinformation
+                            Text: =varRecord.DateofInformation
                             Width: =valReportedBy_1.Width
                             X: =lblIssueStatus_5.X+lblIssueStatus_5.Width
                             Y: =lblReportedBy_1.Y
@@ -633,7 +633,7 @@ scrRequests As screen:
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_featuredetails
+                            Text: =varRecord.FeatureDetails
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth-lblIssueStatus_6.Width
                             X: =valReportedBy_1.X
@@ -685,7 +685,7 @@ scrRequests As screen:
                             Height: =Parent.TemplateHeight*.25
                             OnSelect: =Select(Parent)
                             PCFTeamsTheme: =TeamsTheme.Default
-                            Text: =varRecord.cr5f0_featuredetails
+                            Text: =varRecord.FeatureDetails
                             VerticalAlignment: =VerticalAlign.Top
                             Width: =valIssueStatus_6.Width
                             X: =valReportedBy_1.X
